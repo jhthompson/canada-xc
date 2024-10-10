@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canada XC</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="{% static 'maple-leaf.svg' %}" alt="Canadian XC Logo">
+                <h1>Canadian Cross Country</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Results</a>
+                <a href="#">Races</a>
+                <a href="#">Rankings</a>
+                <a href="#">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            <!-- Latest Results Section -->
+            <section class="card">
+                <h2>Latest Results</h2>
+                <div class="card-item">
+                    <h3>National Championships</h3>
+                    <p>Date: October 1, 2024</p>
+                    <a href="#" class="link">View full results</a>
+                </div>
+                <div class="card-item">
+                    <h3>Provincial Series - Ontario</h3>
+                    <p>Date: September 15, 2024</p>
+                    <a href="#" class="link">View full results</a>
+                </div>
+            </section>
+
+            <!-- Upcoming Races Section -->
+            <section class="card">
+                <h2>Upcoming Races</h2>
+                <div class="card-item">
+                    <h3>Western Canadian Championships</h3>
+                    <p>Date: October 20, 2024</p>
+                    <p>Location: Vancouver, BC</p>
+                    <a href="#" class="link">Register now</a>
+                </div>
+                <div class="card-item">
+                    <h3>Eastern Canadian Championships</h3>
+                    <p>Date: November 5, 2024</p>
+                    <p>Location: Halifax, NS</p>
+                    <a href="#" class="link">Register now</a>
+                </div>
+            </section>
+
+            <!-- Current Rankings Section -->
+            <section class="card">
+                <h2>Current Rankings</h2>
+                <div class="card-item">
+                    <h3>Senior Men</h3>
+                    <ol>
+                        <li>John Smith</li>
+                        <li>Michael Johnson</li>
+                        <li>David Brown</li>
+                    </ol>
+                </div>
+                <div class="card-item">
+                    <h3>Senior Women</h3>
+                    <ol>
+                        <li>Sarah Thompson</li>
+                        <li>Emily Wilson</li>
+                        <li>Jessica Lee</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h3>Contact Us</h3>
+                <p>Email: info@canadianxc.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
