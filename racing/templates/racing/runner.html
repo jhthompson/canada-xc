@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ runner.name }}</h1>
+
+<div>
+{% for headshot in runner.headshot_set.all %}
+    <img src="{{ headshot.image.url }}" class="rounded-circle">
+{% endfor %}
+</div>
+
+<h2>Results</h2>
+{% for result in runner.result_set.all %}
+    {{ result.race }} {{ result.time}}
+{% endfor %}
+
+{% endblock content %}

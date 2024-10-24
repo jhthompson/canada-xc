@@ -1,3 +1,109 @@
-from django.contrib import admin
+from import_export import fields, resources
+from import_export.admin import ImportExportModelAdmin
+from import_export.forms import ConfirmImportForm, ImportForm
+from import_export.widgets import ForeignKeyWidget
 
-# Register your models here.
+from django import forms
+from django.contrib import admin
+from django.contrib.admin.widgets import AutocompleteSelect
+
+from racing.models import Headshot, Meet, Race, Result, Runner, Team
+
+
+class HeadshotInline(admin.TabularInline):
+    model = Headshot
+    extra = 1
+
+@admin.register(Runner)
+class RunnerAdmin(admin.ModelAdmin):
+    inlines = [HeadshotInline]
+    list_display = ("name", "birth_date")
+
+@admin.register(Team)
+class TeamAdmin(admin.ModelAdmin):
+    list_display = ("short_name", "full_name")
+
+
+class RaceInline(admin.TabularInline):
+    model = Race
+    extra = 1
+
+
+@admin.register(Meet)
+class MeetAdmin(admin.ModelAdmin):
+    inlines = [RaceInline]
+    list_display = ("name", "date")
+
+class ResultInline(admin.TabularInline):
+    model = Result
+    extra = 1
+
+@admin.register(Race)
+class RaceAdmin(admin.ModelAdmin):
+    inlines=[ResultInline]
+    search_fields = ["name"]
+
+
+class ResultImportForm(ImportForm):
+    """Customized ImportForm, with race field required"""
+
+    race = forms.ModelChoiceField(
+        queryset=Race.objects.all(),
+        required=True,
+        widget=AutocompleteSelect(Result._meta.get_field("race"), admin.site),
+    )
+
+
+class ResultConfirmImportForm(ConfirmImportForm):
+    """Customized ConfirmImportForm, with race field required"""
+
+    race = forms.ModelChoiceField(
+        queryset=Race.objects.all(),
+        required=True,
+        widget=AutocompleteSelect(Result._meta.get_field("race"), admin.site),
+    )
+
+
+class ResultResource(resources.ModelResource):
+    team = fields.Field(
+        column_name="team", 
+        attribute="team",
+        widget=ForeignKeyWidget(Team, "full_name"),
+    )
+
+    def before_import_row(self, row, **kwargs):
+        race_id = kwargs["form"].cleaned_data["race"].id
+        row["race"] = race_id  # set race_id for the row
+
+    class Meta:
+        model = Result
+
+
+@admin.register(Result)
+class RaceResultAdmin(ImportExportModelAdmin):
+    model = Result
+
+    resource_classes = [ResultResource]
+    import_form_class = ResultImportForm
+    confirm_form_class = ResultConfirmImportForm
+
+    def get_import_data_kwargs(self, request, *args, **kwargs):
+        """
+        Prepare kwargs for import_data.
+        """
+        form = kwargs.get("form")
+        if form and hasattr(form, "cleaned_data"):
+            kwargs.update({"race": form.cleaned_data.get("race", None)})
+        return kwargs
+
+    def after_init_instance(self, instance, new, row, **kwargs):
+        if "race" in kwargs:
+            instance.race = kwargs["race"]
+
+    def get_confirm_form_initial(self, request, import_form):
+        initial = super().get_confirm_form_initial(request, import_form)
+        # Pass on the `race` value from the import form to
+        # the confirm form (if provided)
+        if import_form:
+            initial["race"] = import_form.cleaned_data["race"].id
+        return initial
