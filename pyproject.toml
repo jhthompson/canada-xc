@@ -9,6 +9,7 @@ dependencies = [
     "django>=5.1.2",
     "pillow>=11.0.0",
     "psycopg>=3.2.3",
+    "python-dotenv>=1.0.1",
 ]
 
 [tool.uv]
