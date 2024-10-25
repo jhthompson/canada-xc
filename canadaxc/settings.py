@@ -30,6 +30,9 @@ ALLOWED_HOSTS = [
     "canadaxc.ca"
 ]
 
+# Admins
+ADMINS = [("Administrator", "admin@canadaxc.ca")]
+
 if DEBUG:
     ALLOWED_HOSTS.append("localhost")
 
