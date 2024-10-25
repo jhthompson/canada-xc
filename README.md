@@ -1,2 +1,2 @@
 # canada-xc
-Central source of cross country information in Canada
+Django application storing cross country information in Canada
