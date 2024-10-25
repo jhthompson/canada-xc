@@ -18,7 +18,7 @@ dependencies = [
     { name = "django" },
     { name = "django-import-export" },
     { name = "pillow" },
-    { name = "psycopg" },
+    { name = "psycopg", extra = ["c"] },
     { name = "python-dotenv" },
 ]
 
@@ -33,7 +33,7 @@ requires-dist = [
     { name = "django", specifier = ">=5.1.2" },
     { name = "django-import-export", specifier = ">=4.1.1" },
     { name = "pillow", specifier = ">=11.0.0" },
-    { name = "psycopg", specifier = ">=3.2.3" },
+    { name = "psycopg", extras = ["c"], specifier = ">=3.2.3" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
 ]
 
@@ -149,6 +149,17 @@ sdist = { url = "https://files.pythonhosted.org/packages/d1/ad/7ce016ae63e231575
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ce/21/534b8f5bd9734b7a2fcd3a16b1ee82ef6cad81a4796e95ebf4e0c6a24119/psycopg-3.2.3-py3-none-any.whl", hash = "sha256:644d3973fe26908c73d4be746074f6e5224b03c1101d302d9a53bf565ad64907", size = 197934 },
 ]
+
+[package.optional-dependencies]
+c = [
+    { name = "psycopg-c", marker = "implementation_name != 'pypy'" },
+]
+
+[[package]]
+name = "psycopg-c"
+version = "3.2.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/53/ba/74caf4eab78d95a173e65cb81507a589365aeafb1d9c84f374002b51dc53/psycopg_c-3.2.3.tar.gz", hash = "sha256:06ae7db8eaec1a3845960fa7f997f4ccdb1a7a7ab8dc593a680bcc74e1359671", size = 598888 }
 
 [[package]]
 name = "python-dotenv"

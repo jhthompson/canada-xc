@@ -8,7 +8,7 @@ dependencies = [
     "django-import-export>=4.1.1",
     "django>=5.1.2",
     "pillow>=11.0.0",
-    "psycopg>=3.2.3",
+    "psycopg[c]>=3.2.3",
     "python-dotenv>=1.0.1",
 ]
 
