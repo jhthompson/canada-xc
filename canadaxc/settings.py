@@ -133,6 +133,15 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+STATIC_ROOT = os.getenv("DJANGO_STATIC_ROOT")
+
+# Media files (user uploaded files)
+# https://docs.djangoproject.com/en/5.1/topics/files/
+
+MEDIA_URL = "media/"
+
+MEDIA_ROOT = os.getenv("DJANGO_MEDIA_ROOT")
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
