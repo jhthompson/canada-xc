@@ -32,7 +32,9 @@ def runner(request, slug):
     return render(request, "racing/runner.html", {"runner": runner })
 
 def results(request):
-    return render(request, "racing/results.html")
+    meets = Meet.objects.filter(date__lte=timezone.now()).order_by("-date")
+    
+    return render(request, "racing/results.html", {"meets": meets})
 
 def schedule(request):
     return render(request, "racing/schedule.html")

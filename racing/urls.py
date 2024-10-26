@@ -1,13 +1,13 @@
 from django.urls import path, register_converter
 
 from racing.converters import ConferenceConverter
-from racing.views import index, meet
+from racing.views import index, meet, results
 
 register_converter(ConferenceConverter, "conference")
 
 urlpatterns = [
     path("", index, name="index"),
-    # path("results/", results, name="results"),
+    path("results/", results, name="results"),
     path('results/<int:year>/<slug:slug>', meet, name='meet'),
     
     # canadaxc.ca/results/2024/aus-championships

@@ -1,7 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>
-    TODO: hello world!
-</p>
+
+<h1>Recent Results</h1>
+<ul class="list-group mb-3">
+    {% for meet in meets %}
+        <a href="{{ meet.get_absolute_url }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <div>
+                <h2 class="h5 mb-0">{{ meet.name }}</h2>
+                <span class="text-muted">{{ meet.date }}</span>
+            </div>
+            <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ meet.conference }}</span>
+
+
+        </a>
+    {% empty %}
+        <div class="list-group-item fst-italic">No results found</div>
+    {% endfor %}
+</ul>
+
 {% endblock content %}
