@@ -41,6 +41,8 @@
                                     {% endif %}
                                     <span class="fw-normal">{{ team }}</span>
                                 </div>
+                            {% empty %}
+                                <p class="text-muted fst-italic mb-0">No results</p>
                             {% endfor %}
                         </div>
                         <div>
@@ -62,6 +64,8 @@
                                         <span class="fw-normal">{{ result.name }}</span>
                                     {% endif %}
                                 </div>
+                            {% empty %}
+                                <p class="text-muted fst-italic mb-0">No results</p>
                             {% endfor %}
                         </div>
                     </div>
