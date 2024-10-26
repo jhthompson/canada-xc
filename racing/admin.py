@@ -33,6 +33,7 @@ class RaceInline(admin.TabularInline):
 class MeetAdmin(admin.ModelAdmin):
     inlines = [RaceInline]
     list_display = ("name", "date")
+    prepopulated_fields = {"slug": ("name",)}
 
 class ResultInline(admin.TabularInline):
     model = Result
