@@ -160,6 +160,9 @@ cython_debug/
 # DB backups
 *.dump
 
+# Local CSV files of data, used to import results
+data/*.csv
+
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
