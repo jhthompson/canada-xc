@@ -18,6 +18,11 @@ def index(request, conference_short_name=None):
         }
     )
     
+def meet(request, year: int, slug: str):
+    meet = get_object_or_404(Meet, date__year=year, slug=slug)
+    
+    return render(request, "racing/meet.html", {"meet": meet})
+    
 def runners(request):
     return render(request, "racing/runners.html")
 

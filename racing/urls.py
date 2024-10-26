@@ -1,21 +1,24 @@
 from django.urls import path, register_converter
 
 from racing.converters import ConferenceConverter
-from racing.views import index, runner, runners
+from racing.views import index, meet
 
 register_converter(ConferenceConverter, "conference")
 
 urlpatterns = [
     path("", index, name="index"),
     # path("results/", results, name="results"),
+    path('results/<int:year>/<slug:slug>', meet, name='meet'),
+    
+    # canadaxc.ca/results/2024/aus-championships
     # path("schedule/", schedule, name="schedule"),
     
     # runners
-    path('runners/', runners, name='runners'),
-    path('runners/<slug:slug>/', runner, name='runner'),
+    # path('runners/', runners, name='runners'),
+    # path('runners/<slug:slug>/', runner, name='runner'),
     
     # per-conference URLs (mirroring the above default URLs)
-    path("<conference:conference>", index, name="conference_index")
+    # path("<conference:conference>", index, name="conference_index")
     
     # TODO: path("conferences/", ...),
     # one path() for each conference? AUS, OUA, RSEQ, CW
