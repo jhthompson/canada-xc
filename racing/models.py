@@ -29,8 +29,8 @@ class Team(models.Model):
     This is often a school, but could also be a club or other organization.
     """
 
-    short_name = models.CharField(max_length=10)
-    full_name = models.CharField(max_length=50)
+    short_name = models.CharField(max_length=10, unique=True)
+    full_name = models.CharField(max_length=50, unique=True)
 
     def __str__(self):
         return self.short_name
