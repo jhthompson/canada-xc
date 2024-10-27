@@ -221,5 +221,3 @@ class Result(models.Model):
             + " "
             + str(self.race.meet.date.year)
         )
-
-
