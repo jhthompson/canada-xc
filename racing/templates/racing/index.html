@@ -12,7 +12,7 @@
             </div>
             <div class="card-body">
                 {% for race in latest_results %}
-                    <div class="d-flex justify-content-between gap-1">
+                    <div class="d-flex justify-content-between align-items-center gap-1">
                         <div>
                             <h3 class="h6 mb-0">
                                 <a class="link-dark" href="{{ race.meet.get_absolute_url }}">{{ race.meet.name }} ({{ race.sex }})</a>
@@ -21,6 +21,8 @@
                         </div>
                         {% if race.meet.conference.logo %}
                             <img src="{{ race.meet.conference.logo.url }}" alt="Conference logo" style="height: 2rem">
+                        {% else %}
+                            <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ race.meet.conference }}</span>
                         {% endif %}
                     </div>
                     <div class="d-flex justify-content-between gap-3">
