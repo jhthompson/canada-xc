@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load humanize racing_extras %}
+{% load static humanize racing_extras %}
 
 {% block content %}
 
@@ -25,7 +25,18 @@
                 <tbody>
                     {% for result in race.top_results %}
                         <tr>
-                            <td>{{ forloop.counter|ordinal }}</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    {% if forloop.counter == 1 %}
+                                        <img src="{% static 'gold.svg' %}" alt="Gold" class="me-2">
+                                    {% elif forloop.counter == 2 %}
+                                        <img src="{% static 'silver.svg' %}" alt="Silver" class="me-2">
+                                    {% elif forloop.counter == 3 %}
+                                        <img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">
+                                    {% endif %}
+                                    <span>{{ forloop.counter|ordinal }}</span>
+                                </div>
+                            </td>
                             <td>{{ result.name }}</td>
                             <td>{{ result.team }}</td>
                             <td>{{ result.time|finish_time }}</td>
@@ -50,7 +61,16 @@
                 <tbody>
                     {% for team, score in race.top_teams %}
                         <tr>
-                            <td>{{ forloop.counter|ordinal }}</td>
+                            <td>
+                                {% if forloop.counter == 1 %}
+                                    <img src="{% static 'gold.svg' %}" alt="Gold" class="me-2">
+                                {% elif forloop.counter == 2 %}
+                                    <img src="{% static 'silver.svg' %}" alt="Silver" class="me-2">
+                                {% elif forloop.counter == 3 %}
+                                    <img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">
+                                {% endif %}
+                                {{ forloop.counter|ordinal }}
+                            </td>
                             <td>{{ team }}</td>
                             <td>{{ score }}</td>
                         </tr>
