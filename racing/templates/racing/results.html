@@ -10,7 +10,12 @@
                 <p class="mb-0">{{ meet.name }}</p>
                 <span class="text-muted">{{ meet.date }}</span>
             </div>
-            <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ meet.conference }}</span>
+            {% if meet.conference.logo %}
+                <img src="{{ meet.conference.logo.url }}" alt="Conference logo" style="height: 2rem">
+            {% else %}
+                <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ meet.conference }}</span>
+            {% endif %}
+
         </a>
     {% empty %}
         <div class="list-group-item fst-italic">No results found</div>

@@ -15,15 +15,13 @@
                     <div class="d-flex justify-content-between gap-1">
                         <div>
                             <h3 class="h6 mb-0">
-                                <a class="link-dark" href="{{ race.meet.get_absolute_url }}">{{ race.meet.name }}</a>
+                                <a class="link-dark" href="{{ race.meet.get_absolute_url }}">{{ race.meet.name }} ({{ race.sex }})</a>
                             </h3>
                             <p class="text-muted small mb-2">{{ race.meet.date }}</p>
                         </div>
-                        <div class="flex-shrink-0">
-                            <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ race.meet.conference }}</span>
-                            <span class="badge bg-secondary-subtle border border-secondary-subtle text-primary-emphasis rounded-pill">{{ race.sex }}</span>
-                            <span class="badge bg-secondary-subtle border border-secondary-subtle text-primary-emphasis rounded-pill">{{ race.get_display_distance }}</span>
-                        </div>
+                        {% if race.meet.conference.logo %}
+                            <img src="{{ race.meet.conference.logo.url }}" alt="Conference logo" style="height: 2rem">
+                        {% endif %}
                     </div>
                     <div class="d-flex justify-content-between gap-3">
                         <div>
@@ -111,4 +109,3 @@
     </div>
 </div>
 {% endblock content %}
-

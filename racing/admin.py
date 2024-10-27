@@ -7,8 +7,12 @@ from django import forms
 from django.contrib import admin
 from django.contrib.admin.widgets import AutocompleteSelect
 
-from racing.models import Headshot, Meet, Race, Result, Runner, Team
+from racing.models import Conference, Headshot, Meet, Race, Result, Runner, Team
 
+
+@admin.register(Conference)
+class ConferenceAdmin(admin.ModelAdmin):
+    list_display = ("short_name", "full_name", "logo")
 
 class HeadshotInline(admin.TabularInline):
     model = Headshot

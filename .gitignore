@@ -156,6 +156,7 @@ cython_debug/
 
 # Django specific local media folder
 /headshots
+/conference_logos
 
 # DB backups
 *.dump
