@@ -10,6 +10,7 @@
                 <p class="mb-0">{{ meet.name }}</p>
                 <span class="text-muted">{{ meet.date }}</span>
             </div>
+            <div>
             {% for conference in meet.conferences.all %}
                 {% if conference.logo %}
                     <img src="{{ conference.logo.url }}" alt="Conference logo" style="height: 2rem">
@@ -17,6 +18,7 @@
                     <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ conference }}</span>
                 {% endif %}            
             {% endfor %}
+            </div>
         </a>
     {% empty %}
         <div class="list-group-item fst-italic">No results found</div>
