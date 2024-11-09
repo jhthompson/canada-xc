@@ -22,6 +22,7 @@ class RosterSpotInline(admin.TabularInline):
 class RunnerAdmin(admin.ModelAdmin):
     inlines = [RosterSpotInline]
     list_display = ("name", "birth_date")
+    prepopulated_fields = {"slug": ("name",)}
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
