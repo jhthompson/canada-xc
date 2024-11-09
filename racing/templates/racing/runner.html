@@ -7,7 +7,9 @@
 
 <div>
 {% for spot in runner.rosterspot_set.all %}
-    <img src="{{ spot.headshot.url }}" class="rounded-circle">
+    {% if spot.headshot %}
+        <img src="{{ spot.headshot.url }}" class="rounded-circle">
+    {% endif %}
 {% endfor %}
 </div>
 
