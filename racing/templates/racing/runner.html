@@ -1,17 +1,24 @@
 {% extends "base.html" %}
 
+{% load racing_extras %}
+
 {% block content %}
 <h1>{{ runner.name }}</h1>
 
 <div>
-{% for headshot in runner.headshot_set.all %}
-    <img src="{{ headshot.image.url }}" class="rounded-circle">
+{% for spot in runner.rosterspot_set.all %}
+    <img src="{{ spot.headshot.url }}" class="rounded-circle">
 {% endfor %}
 </div>
 
 <h2>Results</h2>
-{% for result in runner.result_set.all %}
-    {{ result.race }} {{ result.time }}
-{% endfor %}
+<div class="list-group">
+    {% for result in runner.result_set.all %}
+        <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="{{ result.race.meet.get_absolute_url }}">
+            {{ result.race.meet }} {{ result.race.meet.date.year }} - {{ result.time|finish_time }}
+        </a>     
+    {% endfor %}
+</div>
+
 
 {% endblock content %}

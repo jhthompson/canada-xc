@@ -183,18 +183,20 @@ class Runner(models.Model):
         return reverse("runner", kwargs={"slug": self.slug})
     
         
-class Headshot(models.Model):
+class RosterSpot(models.Model):
     """
-    A headshot of a runner.
+    A runner's spot on a team.
+    
+    For instance, Jeremy Thompson's roster spot on the 2016 UPEI team.
     """
     
-    runner = models.ForeignKey(Runner, on_delete=models.CASCADE, blank=True, null=True)
-    image = models.ImageField(upload_to="headshots")
-    year = models.IntegerField()
+    runner = models.ForeignKey(Runner, on_delete=models.CASCADE)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    year = models.IntegerField()
+    headshot = models.ImageField(upload_to="headshots", blank=True, null=True)
     
     def __str__(self):
-        return f"{self.runner} headshot"
+        return f"{self.runner} roster spot on {self.team} in {self.year}"
 
 
 

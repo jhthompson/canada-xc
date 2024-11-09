@@ -1,7 +1,7 @@
 from django.urls import path, register_converter
 
 from racing.converters import ConferenceConverter
-from racing.views import index, meet, results
+from racing.views import index, meet, results, runner
 
 register_converter(ConferenceConverter, "conference")
 
@@ -15,7 +15,7 @@ urlpatterns = [
     
     # runners
     # path('runners/', runners, name='runners'),
-    # path('runners/<slug:slug>/', runner, name='runner'),
+    path('runners/<slug:slug>/', runner, name='runner'),
     
     # per-conference URLs (mirroring the above default URLs)
     # path("<conference:conference>", index, name="conference_index")

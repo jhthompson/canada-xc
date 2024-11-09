@@ -7,20 +7,20 @@ from django import forms
 from django.contrib import admin
 from django.contrib.admin.widgets import AutocompleteSelect
 
-from racing.models import Conference, Headshot, Meet, Race, Result, Runner, Team
+from racing.models import Conference, Meet, Race, Result, RosterSpot, Runner, Team
 
 
 @admin.register(Conference)
 class ConferenceAdmin(admin.ModelAdmin):
     list_display = ("short_name", "full_name", "logo")
 
-class HeadshotInline(admin.TabularInline):
-    model = Headshot
+class RosterSpotInline(admin.TabularInline):
+    model = RosterSpot
     extra = 1
 
 @admin.register(Runner)
 class RunnerAdmin(admin.ModelAdmin):
-    inlines = [HeadshotInline]
+    inlines = [RosterSpotInline]
     list_display = ("name", "birth_date")
 
 @admin.register(Team)
