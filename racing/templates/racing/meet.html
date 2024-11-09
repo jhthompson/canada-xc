@@ -6,9 +6,11 @@
 
 <div class="d-flex justify-content-between align-items-center">
     <h1>{{ meet.date.year }} {{ meet.name }}</h1>
-    {% if meet.conference.logo %}
-        <img src="{{ meet.conference.logo.url }}" alt="Conference logo" style="height: 3rem">
-    {% endif %}
+    {% for conference in meet.conferences.all %}
+        {% if conference.logo %}
+            <img src="{{ conference.logo.url }}" alt="Conference logo" style="height: 3rem">
+        {% endif %}
+    {% endfor %}
 </div>
 
 {% for race in meet.race_set.all %}

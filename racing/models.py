@@ -46,7 +46,7 @@ class Meet(models.Model):
     name = models.CharField(max_length=50)
     slug = models.SlugField(unique=True)
     date = models.DateField()
-    conference = models.ForeignKey(Conference, on_delete=models.CASCADE)
+    conferences = models.ManyToManyField(Conference)
 
     def __str__(self):
         return self.name
