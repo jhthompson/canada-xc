@@ -9,7 +9,7 @@ from racing.models import Result, Runner
 class Command(BaseCommand):
     help = 'Assign Runners to Results based on name matching with fuzzy matching support'
     
-    SIMILARITY_THRESHOLD = 85  # Adjust this threshold as needed
+    SIMILARITY_THRESHOLD = 75  # Adjust this threshold as needed
 
     def add_arguments(self, parser):
         parser.add_argument('race_id', type=int, help='ID of the race to filter results')
