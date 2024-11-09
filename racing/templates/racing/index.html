@@ -99,7 +99,9 @@
                         <p class="text-muted small mb-0">{{ meet.date }}</p>
                     </div>
                     <div>
-                        <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ meet.conference }}</span>
+                        {% for conference in meet.conferences.all %}
+                            <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ conference }}</span>
+                        {% endfor %}
                     </div>
                 </li>
                 {% empty %}
