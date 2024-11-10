@@ -40,7 +40,6 @@ def runner(request, slug):
         results_with_positions.append({
             'result': result,
             'position': position,
-            'total': race_results.count()
         })
     
     # Sort by date descending
