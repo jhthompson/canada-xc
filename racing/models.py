@@ -34,7 +34,7 @@ class Team(models.Model):
     This is often a school, but could also be a club or other organization.
     """
 
-    short_name = models.CharField(max_length=10, unique=True)
+    short_name = models.CharField(max_length=12, unique=True)
     full_name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(unique=True)
 
