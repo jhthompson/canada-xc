@@ -20,6 +20,7 @@ class RosterSpotInline(admin.TabularInline):
     
 class ResultInline(admin.TabularInline):
     model = Result
+    extra = 0
 
 @admin.register(Runner)
 class RunnerAdmin(admin.ModelAdmin):
