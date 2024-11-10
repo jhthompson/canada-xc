@@ -8,9 +8,9 @@
 <h2>Teams</h2>
 <div class="list-group mb-2">
     {% for spot in runner.rosterspot_set.all %}
-        <a class="list-group-item list-group-item-action" href="#">{{ spot.team }} {{ spot.year }}</li>
+        <a class="list-group-item list-group-item-action" href="{% url 'roster' spot.team.slug spot.year %}">{{ spot.team }} {{ spot.year }}</a>
     {% endfor %}
-        </div>
+</div>
 
 <h2>Results</h2>
 <div class="list-group">
