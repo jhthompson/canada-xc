@@ -44,7 +44,7 @@
                                         <img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">
                                     {% endif %}
                                     <div>
-                                        {{ team }}
+                                        <a href="{% url 'roster' team.slug race.meet.date.year %}">{{ team }}</a>
                                         <span class="text-muted">({{ score.score }})</span>
                                     </div>
                                 </div>
