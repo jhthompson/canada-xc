@@ -19,14 +19,15 @@
                             </h3>
                             <p class="text-muted small mb-2">{{ race.meet.date }}</p>
                         </div>
-                        {% for conference in race.meet.conferences.all %}
-                            {% if conference.logo %}
-                                <img src="{{ conference.logo.url }}" alt="Conference logo" style="height: 2rem">
-                            {% else %}
-                                <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ conference }}</span>
-                            {% endif %}
-                        {% endfor %}
-
+                        <div class="align-self-start">
+                            {% for conference in race.meet.conferences.all %}
+                                {% if conference.logo %}
+                                    <img src="{{ conference.logo.url }}" alt="Conference logo" style="height: 2rem">
+                                {% else %}
+                                    <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ conference }}</span>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
                     </div>
                     <div class="d-flex justify-content-between gap-3">
                         <div>
