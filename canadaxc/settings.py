@@ -37,7 +37,11 @@ ALLOWED_HOSTS = [
 
 if DEBUG:
     ALLOWED_HOSTS.append("127.0.0.1")
-    INTERNAL_IPS = ["127.0.0.1"]
+    
+INTERNAL_IPS = []
+
+if DEBUG:
+    INTERNAL_IPS.append("127.0.0.1")
 
 # Admins
 ADMINS = [("Administrator", "admin@canadaxc.ca")]
