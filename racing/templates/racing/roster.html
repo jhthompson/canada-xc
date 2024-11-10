@@ -9,7 +9,9 @@
 <h2>Male</h2>
 <ul>
     {% for spot in males %}
-        <li>{{ spot.runner.name }}</li>
+        <li>
+            <a href="{{ spot.runner.get_absolute_url }}">{{ spot.runner.name }}</a>
+        </li>
     {% empty %}
         <li class="text-muted fst-italic">No team members</p>
     {% endfor %}
@@ -18,7 +20,9 @@
 <h2>Female</h2>
 <ul>
     {% for spot in females %}
-        <li>{{ spot.runner.name }}</li>
+        <li>
+            <a href="{{ spot.runner.get_absolute_url }}">{{ spot.runner.name }}</a>
+        </li>
     {% empty %}
         <li class="text-muted fst-italic">No team members</p>
     {% endfor %}
