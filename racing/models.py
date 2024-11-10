@@ -1,4 +1,5 @@
 from collections import Counter, defaultdict
+from dataclasses import dataclass
 from operator import itemgetter
 
 from django.db import models
@@ -61,6 +62,10 @@ class Meet(models.Model):
         return reverse("meet", kwargs={"year": self.date.year, "slug": self.slug})
     
 
+@dataclass
+class TeamScore:
+    score: int
+    scoring_members: list[tuple['Result', int]]  # (result, points)
 
 class Race(models.Model):
     """
@@ -68,8 +73,6 @@ class Race(models.Model):
 
     For instance, the 2024 AUS Championship's men's 10km.
     """
-    
-
 
     UNIT_CHOICES = [("km", "km"), ("mi", "miles")]
 
@@ -106,70 +109,62 @@ class Race(models.Model):
         return self.score_teams()
     
     def top_results(self):
-        return self.result_set.all().order_by('time')
-    
+        return self.result_set.all().order_by('time', 'id')
+
     def score_teams(self, scoring_finisher_count: int = 5, maximum_team_size: int = 7):
         """
-        Scores teams based on their top finishers.
+        Scores teams based on their top finishers and tracks scoring members.
         
-        If any result has a points value, calculate totals based on that.
-        
-        Otherwise, will manually assign points totals based on the arguments.
-        
-        Teams are allowed a `maximum_team_size` that will score points.
-        Only the top `scoring_finisher_count` finishers from each team will count towards their teams total.
+        Returns:
+            List of (team, TeamScore) tuples sorted by score ascending.
+            TeamScore contains total score and list of (result, points) for scoring members.
         """
-        
         team_results = defaultdict(list)
-        team_scores = defaultdict(int)
-                
-        results = self.result_set.all().order_by('time')
+        team_scores = {}  # Will store TeamScore objects
+                    
+        results = self.top_results()
         
-        # First check for manual points totals present on results
+        # Handle manual points case
         if any(result.points is not None for result in results):
             for result in results:
                 team = result.team
-                
                 if result.points is not None and len(team_results[team]) < scoring_finisher_count:
-                    team_scores[team] += result.points
+                    if team not in team_scores:
+                        team_scores[team] = TeamScore(0, [])
+                    team_scores[team].score += result.points
+                    team_scores[team].scoring_members.append((result, result.points))
+                team_results[team].append(result)
                     
-                team_results[team].append(result)  
-                
-            return sorted(team_scores.items(), key=itemgetter(1))
+            return sorted(team_scores.items(), key=lambda x: x[1].score)
 
-        # Otherwise, calculate points manually
-        
-        # 1. Count the number of finishers for each team
+        # Calculate points manually
         team_finishers_count = Counter(result.team for result in results)
-        
-        # 2. Determine which teams will score points
         scoring_teams = {
             team for team, count 
             in team_finishers_count.items()
             if count >= scoring_finisher_count
         }
         
-        # 3. Assign points to valid finishers
         points = 1
-
         for result in results:
             team = result.team
             
             if team in scoring_teams:
+                if team not in team_scores:
+                    team_scores[team] = TeamScore(0, [])
+                    
                 if len(team_results[team]) < scoring_finisher_count:
-                    # This finisher scores points for their team
-                    team_scores[team] += points
+                    # This finisher scores points
+                    team_scores[team].score += points
+                    team_scores[team].scoring_members.append((result, points))
                     
                 if len(team_results[team]) < maximum_team_size:
-                    # This finisher doesn't score for their team but still
-                    # increments the points for the next finisher
                     points += 1
                     
             team_results[team].append(result)
                                     
-        # 4. Sort scores by points in ascending order
-        return sorted(team_scores.items(), key=itemgetter(1))
-        
+        return sorted(team_scores.items(), key=lambda x: x[1].score)
+            
         
 class Runner(models.Model):
     """

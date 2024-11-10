@@ -79,7 +79,12 @@
                                 {{ forloop.counter|ordinal }}
                             </td>
                             <td>{{ team }}</td>
-                            <td>{{ score }}</td>
+                            <td>
+                                {{ score.score }}
+                                <div class="d-inline text-muted">
+                                    ({% for result, points in score.scoring_members %}<span data-bs-toggle="tooltip" data-bs-title="{{ result.runner.name }}">{{ points }}</span>{% if not forloop.last %}, {% endif %}{% endfor %})
+                                </div>
+                            </td>
                         </tr>
                     {% endfor %}
                 </tbody>

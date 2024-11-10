@@ -47,14 +47,20 @@
         {% endblock content %}
     </main>
 
+    <div class="container">
+        <footer class="py-3 my-4 border-top">
+            <p class="fw-light mb-0">
+                Created and maintained by <a href="https://jhthompson.ca">Jeremy Thompson</a>
+            </p>
+        </footer>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
 </body>
-<div class="container">
-    <footer class="py-3 my-4 border-top">
-        <p class="fw-light mb-0">
-            Created and maintained by <a href="https://jhthompson.ca">Jeremy Thompson</a>
-        </p>
-    </footer>
-</div>
+
 </html>
