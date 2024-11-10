@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load static %}
+{% load static racing_extras %}
 
 {% block content %}
 <div class="row g-4">
@@ -15,7 +15,7 @@
                     <div class="d-flex justify-content-between align-items-center gap-1">
                         <div>
                             <h3 class="h6 mb-0">
-                                <a class="link-dark" href="{{ race.meet.get_absolute_url }}">{{ race.meet.name }} ({{ race.sex }})</a>
+                                <a href="{{ race.meet.get_absolute_url }}">{{ race.meet.name }} ({{ race.sex }})</a>
                             </h3>
                             <p class="text-muted small mb-2">{{ race.meet.date }}</p>
                         </div>
@@ -43,7 +43,10 @@
                                     {% if forloop.counter == 3 %}
                                         <img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">
                                     {% endif %}
-                                    <span class="fw-normal">{{ team }}</span>
+                                    <div>
+                                        {{ team }}
+                                        <span class="text-muted">({{ score.score }})</span>
+                                    </div>
                                 </div>
                             {% empty %}
                                 <p class="text-muted fst-italic mb-0">No results</p>
@@ -62,11 +65,14 @@
                                     {% if forloop.counter == 3 %}
                                         <img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">
                                     {% endif %}
-                                    {% if result.runner %}
-                                        <a href="{{ result.runner.get_absolute_url }}">{{ result.name }}</a>
-                                    {% else %}
-                                        <span class="fw-normal">{{ result.name }}</span>
-                                    {% endif %}
+                                    <div>
+                                        {% if result.runner %}
+                                            <a href="{{ result.runner.get_absolute_url }}">{{ result.name }}</a>
+                                        {% else %}
+                                            <span>{{ result.name }}</span>
+                                        {% endif %}
+                                        <span class="text-muted">({{ result.time | finish_time }})</span>
+                                    </div>
                                 </div>
                             {% empty %}
                                 <p class="text-muted fst-italic mb-0">No results</p>
