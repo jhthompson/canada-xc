@@ -5,13 +5,12 @@
 {% block content %}
 <h1>{{ runner.name }}</h1>
 
-<div>
-{% for spot in runner.rosterspot_set.all %}
-    {% if spot.headshot %}
-        <img src="{{ spot.headshot.url }}" class="rounded-circle">
-    {% endif %}
-{% endfor %}
-</div>
+<h2>Teams</h2>
+<div class="list-group mb-2">
+    {% for spot in runner.rosterspot_set.all %}
+        <a class="list-group-item list-group-item-action" href="#">{{ spot.team }} {{ spot.year }}</li>
+    {% endfor %}
+        </div>
 
 <h2>Results</h2>
 <div class="list-group">
