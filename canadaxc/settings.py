@@ -35,6 +35,10 @@ ALLOWED_HOSTS = [
     "canadaxc.ca"
 ]
 
+if DEBUG:
+    ALLOWED_HOSTS.append("127.0.0.1")
+    INTERNAL_IPS = ["127.0.0.1"]
+
 # Admins
 ADMINS = [("Administrator", "admin@canadaxc.ca")]
 
@@ -56,6 +60,9 @@ INSTALLED_APPS = [
     "racing",
 ]
 
+if DEBUG:
+    INSTALLED_APPS.append("debug_toolbar")
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -65,6 +72,9 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+if DEBUG:
+    MIDDLEWARE.insert(0, "debug_toolbar.middleware.DebugToolbarMiddleware")
 
 ROOT_URLCONF = "canadaxc.urls"
 
