@@ -17,10 +17,13 @@ class ConferenceAdmin(admin.ModelAdmin):
 class RosterSpotInline(admin.TabularInline):
     model = RosterSpot
     extra = 1
+    
+class ResultInline(admin.TabularInline):
+    model = Result
 
 @admin.register(Runner)
 class RunnerAdmin(admin.ModelAdmin):
-    inlines = [RosterSpotInline]
+    inlines = [RosterSpotInline, ResultInline]
     list_display = ("name", "sex", "birth_date")
     prepopulated_fields = {"slug": ("name",)}
 
