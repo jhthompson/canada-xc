@@ -6,6 +6,11 @@ from django.template.defaultfilters import floatformat
 from django.urls import reverse
 
 
+class Sex(models.TextChoices):
+    MALE = "M", "Male"
+    FEMALE = "F", "Female"
+    MIXED = "X", "Mixed"
+
 class Conference(models.Model):
     """
     A conference in a cross country league.
@@ -55,6 +60,7 @@ class Meet(models.Model):
         return reverse("meet", kwargs={"year": self.date.year, "slug": self.slug})
     
 
+
 class Race(models.Model):
     """
     A single cross country race.
@@ -62,10 +68,7 @@ class Race(models.Model):
     For instance, the 2024 AUS Championship's men's 10km.
     """
     
-    class Sex(models.TextChoices):
-        MALE = "M", "Male"
-        FEMALE = "F", "Female"
-        MIXED = "X", "Mixed"
+
 
     UNIT_CHOICES = [("km", "km"), ("mi", "miles")]
 
@@ -174,6 +177,8 @@ class Runner(models.Model):
     
     name = models.CharField(max_length=100)
     slug = models.SlugField()
+    sex = models.CharField(max_length=1, choices=Sex, default=Sex.MIXED)
+
     birth_date = models.DateField(null=True, blank=True)
     
     def __str__(self):
@@ -207,13 +212,13 @@ class Result(models.Model):
     For instance, Jeremy Thompson's 35:05 finish in the 2017 AUS Championship.
     """
 
-    race = models.ForeignKey(Race, on_delete=models.CASCADE)
+    race = models.ForeignKey(Race, on_delete=models.PROTECT)
     name = models.CharField(max_length=50)
     time = models.DurationField()
-    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    team = models.ForeignKey(Team, on_delete=models.PROTECT)
     points = models.IntegerField(blank=True, null=True)
     
-    runner = models.ForeignKey(Runner, on_delete=models.CASCADE, blank=True, null=True)
+    runner = models.ForeignKey(Runner, on_delete=models.SET_NULL, blank=True, null=True)
 
     def __str__(self):
         return (
