@@ -29,7 +29,30 @@ def runners(request):
 def runner(request, slug):
     runner = get_object_or_404(Runner, slug=slug)
     
-    return render(request, "racing/runner.html", {"runner": runner })
+    # Get runner's results
+    results_with_positions = []
+    for result in runner.result_set.all():
+        # Get all results from this race ordered by time
+        race_results = result.race.top_results()
+        # Find position of current result
+        position = list(race_results).index(result) + 1
+        # Store result and position
+        results_with_positions.append({
+            'result': result,
+            'position': position,
+            'total': race_results.count()
+        })
+    
+    # Sort by date descending
+    results_with_positions.sort(
+        key=lambda x: x['result'].race.meet.date,
+        reverse=True
+    )
+    
+    return render(request, "racing/runner.html", {
+        "runner": runner,
+        "results": results_with_positions
+    })
 
 def results(request):
     meets = Meet.objects.filter(date__lte=timezone.now()).order_by("-date")

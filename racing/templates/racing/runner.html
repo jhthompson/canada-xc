@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load racing_extras %}
+{% load humanize racing_extras %}
 
 {% block content %}
 <h1>{{ runner.name }}</h1>
@@ -14,9 +14,9 @@
 
 <h2>Results</h2>
 <div class="list-group">
-    {% for result in runner.result_set.all %}
-        <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="{{ result.race.meet.get_absolute_url }}">
-            {{ result.race.meet }} {{ result.race.meet.date.year }} - {{ result.time|finish_time }}
+    {% for result in results %}
+        <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="{{ result.result.race.meet.get_absolute_url }}">
+            {{ result.position|ordinal }} - {{ result.result.race.meet }} {{ result.result.race.meet.date.year }} ({{ result.result.time|finish_time }})
         </a>     
     {% endfor %}
 </div>
