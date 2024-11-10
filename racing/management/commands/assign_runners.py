@@ -3,7 +3,7 @@ from thefuzz import fuzz
 from django.core.management.base import BaseCommand
 from django.utils.text import slugify
 
-from racing.models import Result, Runner
+from racing.models import Result, RosterSpot, Runner
 
 
 class Command(BaseCommand):
@@ -14,13 +14,44 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('race_id', type=int, help='ID of the race to filter results')
 
-    def _check_sex_match(self, result, runner):
+    def _check_sex_match(self, result: Result, runner: Runner):
         if result.race.sex != runner.sex:
             self.stdout.write(self.style.WARNING(
                 f'Sex mismatch - Result: {result.sex}, Runner: {runner.sex}'
             ))
             return False
+        
         return True
+    
+    def _check_team_match(self, result: Result, runner: Runner):
+        """Check if runner has roster spot matching result team/year"""
+        year = result.race.meet.date.year
+        roster_spot = RosterSpot.objects.filter(
+            runner=runner,
+            year=year
+        ).first()
+
+        if roster_spot and roster_spot.team != result.team:
+            self.stdout.write(self.style.WARNING(
+                f'Team mismatch - Result team: {result.team}, '
+                f'Roster team: {roster_spot.team} ({year})'
+            ))
+            return False
+        
+        return True
+    
+    def _create_roster_spot(self, result: Result, runner: Runner):
+        """Create roster spot for runner on result team/year"""
+        year = result.race.meet.date.year
+        roster_spot = RosterSpot.objects.create(
+            runner=runner,
+            team=result.team,
+            year=year
+        )
+        self.stdout.write(self.style.SUCCESS(
+            f'Created roster spot for {runner.name} on {result.team} ({year})'
+        ))
+        return roster_spot
 
     def handle(self, *args, **kwargs):
         race_id = kwargs['race_id']
@@ -83,6 +114,22 @@ class Command(BaseCommand):
                 self._create_runner(result)
 
     def _assign_runner(self, result, runner, match_type):
+        # Check/create roster spot
+        year = result.race.meet.date.year
+        roster_spot = RosterSpot.objects.filter(
+            runner=runner,
+            year=year
+        ).first()
+
+        if not roster_spot:
+            roster_spot = self._create_roster_spot(result, runner)
+        elif roster_spot.team != result.team:
+            self.stdout.write(self.style.WARNING(
+                f'Not assigning - Team mismatch for {runner.name}: '
+                f'Result team: {result.team}, Roster team: {roster_spot.team} ({year})'
+            ))
+            return
+
         result.runner = runner
         result.save()
         self.stdout.write(self.style.SUCCESS(
@@ -95,6 +142,7 @@ class Command(BaseCommand):
             slug=slugify(result.name),
             sex=result.race.sex
         )
+        self._create_roster_spot(result, runner)
         self._assign_runner(result, runner, "new")
 
     def _handle_multiple_matches(self, result, matches):
