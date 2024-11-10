@@ -44,7 +44,13 @@
                                     <span>{{ forloop.counter|ordinal }}</span>
                                 </div>
                             </td>
-                            <td>{{ result.name }}</td>
+                            <td>
+                                {% if result.runner %}
+                                    <a href="{{ result.runner.get_absolute_url }}">{{ result.name }}</a>
+                                {% else %}
+                                    {{ result.name }}
+                                {% endif %}
+                            </td>
                             <td>{{ result.team }}</td>
                             <td>{{ result.time|finish_time }}</td>
                         </tr>
