@@ -8,10 +8,12 @@ register_converter(YearConverter, "year")
 
 urlpatterns = [
     path("", index, name="index"),
+    
+    # results
     path("results/", results, name="results"),
     path('results/<int:year>/<slug:slug>/', meet, name='meet'),
     
-    # canadaxc.ca/results/2024/aus-championships
+    # schedule
     # path("schedule/", schedule, name="schedule"),
     
     # runners
@@ -30,13 +32,13 @@ urlpatterns = [
     # one path() for each conference? AUS, OUA, RSEQ, CW
     # or maybe a query parameter to filter the information?
     
-    # canada-xc.ca/AUS/schedule/2014
+    # canada-xc.ca/aus/schedule/2014
     # canada-xc.ca/schedule/2015?conference=AUS
     # 
     # maybe could be the conference URLs mirror the default ones?
     # canada-xc.ca/         <- overall home page
-    # canada-xc.ca/AUS/     <- AUS home page
+    # canada-xc.ca/aus/     <- AUS home page
     
     # canada-xc.ca/schedule/    <- overall schedule for all conferences
-    # canada-xc.ca/AUS/schedule/    <- overall schedule for AUS
+    # canada-xc.ca/aus/schedule/    <- overall schedule for AUS
 ]
