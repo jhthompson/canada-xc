@@ -176,7 +176,7 @@ class Runner(models.Model):
     """
     
     name = models.CharField(max_length=100)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     sex = models.CharField(max_length=1, choices=Sex, default=Sex.MIXED)
 
     birth_date = models.DateField(null=True, blank=True)
