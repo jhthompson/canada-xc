@@ -22,6 +22,14 @@ def meet(request, year: int, slug: str):
     meet = get_object_or_404(Meet, date__year=year, slug=slug)
     
     return render(request, "racing/meet.html", {"meet": meet})
+
+def race(request, year: int, slug: str, race_info: tuple[int, str, str]):
+    meet = get_object_or_404(Meet, date__year=year, slug=slug)
+    
+    distance, unit, sex = race_info
+    race = get_object_or_404(Race, meet=meet, distance=distance, unit=unit, sex=sex)
+    
+    return render(request, "racing/race.html", {"race": race})
     
 def runners(request):
     return render(request, "racing/runners.html")

@@ -1,10 +1,11 @@
 from django.urls import path, register_converter
 
-from racing.converters import ConferenceConverter, YearConverter
-from racing.views import index, meet, results, roster, runner
+from racing.converters import ConferenceConverter, RaceConverter, YearConverter
+from racing.views import index, meet, race, results, roster, runner
 
 register_converter(ConferenceConverter, "conference")
 register_converter(YearConverter, "year")
+register_converter(RaceConverter, "race_info")
 
 urlpatterns = [
     path("", index, name="index"),
@@ -12,6 +13,7 @@ urlpatterns = [
     # results
     path("results/", results, name="results"),
     path('results/<int:year>/<slug:slug>/', meet, name='meet'),
+    path('results/<int:year>/<slug:slug>/<race_info:race_info>', race, name='race'),
     
     # schedule
     # path("schedule/", schedule, name="schedule"),

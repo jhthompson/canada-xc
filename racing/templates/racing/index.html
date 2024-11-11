@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load static racing_extras %}
+{% load racing_extras static %}
 
 {% block content %}
 <div class="row g-4">
@@ -15,7 +15,7 @@
                     <div class="d-flex justify-content-between align-items-center gap-1">
                         <div>
                             <h3 class="h6 mb-0">
-                                <a href="{{ race.meet.get_absolute_url }}">{{ race.meet.name }} ({{ race.sex }})</a>
+                                <a href="{{ race.get_absolute_url }}">{{ race.meet.name }} ({{ race.get_sex_display }})</a>
                             </h3>
                             <p class="text-muted small mb-2">{{ race.meet.date }}</p>
                         </div>
@@ -71,7 +71,7 @@
                                         {% else %}
                                             <span>{{ result.name }}</span>
                                         {% endif %}
-                                        <span class="text-muted">({{ result.time | finish_time }})</span>
+                                        <span class="text-muted">({{ result.time|finish_time }})</span>
                                     </div>
                                 </div>
                             {% empty %}
