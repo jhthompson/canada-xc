@@ -114,6 +114,7 @@ class Race(models.Model):
     def score_teams(self, scoring_finisher_count: int = 5, maximum_team_size: int = 7):
         """
         Scores teams based on their top finishers and tracks scoring members.
+        Only includes teams with usports=True.
         
         Returns:
             List of (team, TeamScore) tuples sorted by score ascending.
@@ -124,10 +125,16 @@ class Race(models.Model):
                     
         results = self.top_results()
         
+        # Filter to only include usports teams
+        usports_teams = {result.team for result in results if result.team.usports}
+        
         # Handle manual points case
         if any(result.points is not None for result in results):
             for result in results:
                 team = result.team
+                if team not in usports_teams:
+                    continue
+                    
                 if result.points is not None and len(team_results[team]) < scoring_finisher_count:
                     if team not in team_scores:
                         team_scores[team] = TeamScore(0, [])
@@ -138,7 +145,10 @@ class Race(models.Model):
             return sorted(team_scores.items(), key=lambda x: x[1].score)
 
         # Calculate points manually
-        team_finishers_count = Counter(result.team for result in results)
+        team_finishers_count = Counter(
+            result.team for result in results 
+            if result.team in usports_teams
+        )
         scoring_teams = {
             team for team, count 
             in team_finishers_count.items()
