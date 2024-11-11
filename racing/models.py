@@ -65,6 +65,7 @@ class Meet(models.Model):
 class TeamScore:
     score: int
     scoring_members: list[tuple['Result', int]]  # (result, points)
+    displacers: list[tuple['Result', int]]  # (result, points)
 
 class Race(models.Model):
     """
@@ -117,26 +118,29 @@ class Race(models.Model):
 
     def score_teams(self, scoring_finisher_count: int = 5, maximum_team_size: int = 7):
         """
-        Scores teams based on their top finishers and tracks scoring members.
+        Scores teams and tracks scoring members + displacers.
         
         Returns:
             List of (team, TeamScore) tuples sorted by score ascending.
-            TeamScore contains total score and list of (result, points) for scoring members.
+            TeamScore contains total score, scoring members and displacers.
         """
         team_results = defaultdict(list)
         team_scores = {}  # Will store TeamScore objects
                     
         results = self.top_results()
         
-        # Handle manual points case
+        # Handle manual points case 
         if any(result.points is not None for result in results):
             for result in results:
                 team = result.team
-                if result.points is not None and len(team_results[team]) < scoring_finisher_count:
+                if result.points is not None:
                     if team not in team_scores:
-                        team_scores[team] = TeamScore(0, [])
-                    team_scores[team].score += result.points
-                    team_scores[team].scoring_members.append((result, result.points))
+                        team_scores[team] = TeamScore(0, [], [])
+                    if len(team_results[team]) < scoring_finisher_count:
+                        team_scores[team].score += result.points
+                        team_scores[team].scoring_members.append((result, result.points))
+                    elif len(team_results[team]) < maximum_team_size:
+                        team_scores[team].displacers.append((result, result.points))
                 team_results[team].append(result)
                     
             return sorted(team_scores.items(), key=lambda x: x[1].score)
@@ -155,12 +159,15 @@ class Race(models.Model):
             
             if team in scoring_teams:
                 if team not in team_scores:
-                    team_scores[team] = TeamScore(0, [])
+                    team_scores[team] = TeamScore(0, [], [])
                     
                 if len(team_results[team]) < scoring_finisher_count:
                     # This finisher scores points
                     team_scores[team].score += points
                     team_scores[team].scoring_members.append((result, points))
+                elif len(team_results[team]) < maximum_team_size:
+                    # This finisher is a displacer
+                    team_scores[team].displacers.append((result, points))
                     
                 if len(team_results[team]) < maximum_team_size:
                     points += 1

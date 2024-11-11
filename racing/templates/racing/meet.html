@@ -88,7 +88,7 @@
                             <td>
                                 {{ score.score }}
                                 <div class="d-inline text-muted">
-                                    ({% for result, points in score.scoring_members %}<span data-bs-toggle="tooltip" data-bs-title="{{ result.runner.name }}">{{ points }}</span>{% if not forloop.last %}, {% endif %}{% endfor %})
+                                    ({% for result, points in score.scoring_members %}<span data-bs-toggle="tooltip" data-bs-title="{{ result.name }}">{{ points }}</span>{% if not forloop.last %}, {% endif %}{% endfor %}{% for result, points in score.displacers %}, <del data-bs-toggle="tooltip" data-bs-title="{{ result.name }}">{{ points }}</del>{% endfor %})
                                 </div>
                             </td>
                         </tr>
