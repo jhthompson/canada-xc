@@ -1,6 +1,5 @@
 from collections import Counter, defaultdict
 from dataclasses import dataclass
-from operator import itemgetter
 
 from django.db import models
 from django.template.defaultfilters import floatformat
