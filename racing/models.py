@@ -105,6 +105,10 @@ class Race(models.Model):
         return f'{floatformat(self.distance, "-1")} {self.unit}'
     
     def top_teams(self):
+        conferences = self.meet.conferences.all()
+        if conferences.count() == 1 and conferences.first().short_name == "RSEQ":
+            return self.score_teams(5, 14)
+        
         return self.score_teams()
     
     def top_results(self):
