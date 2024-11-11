@@ -37,7 +37,6 @@ class Team(models.Model):
     short_name = models.CharField(max_length=12)
     full_name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(unique=True)
-    usports = models.BooleanField(default=False)
 
     def __str__(self):
         return self.short_name

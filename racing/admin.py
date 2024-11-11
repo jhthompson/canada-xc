@@ -27,19 +27,10 @@ class RunnerAdmin(admin.ModelAdmin):
     inlines = [RosterSpotInline, ResultInline]
     list_display = ("name", "sex", "birth_date")
     prepopulated_fields = {"slug": ("name",)}
-    
-    
-@admin.action(description="Toggle USports status")
-def toggle_usports_status(modeladmin, request, queryset):
-    for team in queryset:
-        team.usports = not team.usports
-        team.save()
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
     list_display = ("short_name", "full_name")
-    actions = [toggle_usports_status]
-
 
 class RaceInline(admin.TabularInline):
     model = Race
