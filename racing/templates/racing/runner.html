@@ -15,7 +15,7 @@
 <h2>Results</h2>
 <div class="list-group">
     {% for result in results %}
-        <a class="list-group-item list-group-item-action d-flex align-items-center" href="{{ result.result.race.meet.get_absolute_url }}">
+        <a class="list-group-item list-group-item-action d-flex align-items-center" href="{{ result.result.race.get_absolute_url }}">
             {% if result.position == 1 %}
                 <img src="{% static 'gold.svg' %}" alt="Gold" class="me-2">
             {% elif result.position == 2 %}
