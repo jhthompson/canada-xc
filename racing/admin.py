@@ -77,7 +77,7 @@ class ResultResource(resources.ModelResource):
     team = fields.Field(
         column_name="team", 
         attribute="team",
-        widget=ForeignKeyWidget(Team, "short_name"),
+        widget=ForeignKeyWidget(Team, "full_name"),
     )
 
     def before_import_row(self, row, **kwargs):
