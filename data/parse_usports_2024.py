@@ -1,5 +1,7 @@
-from bs4 import BeautifulSoup
 import csv
+
+from bs4 import BeautifulSoup
+
 
 def clean_name(name):
     # Convert "LASTNAME, Firstname" to "Firstname Lastname"
