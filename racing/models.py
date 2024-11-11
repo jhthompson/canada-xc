@@ -80,6 +80,7 @@ class Race(models.Model):
     unit = models.CharField(choices=UNIT_CHOICES, max_length=2, default="km")
     time = models.TimeField(null=True, blank=True)
     sex = models.CharField(max_length=1, choices=Sex, default=Sex.MIXED)
+    official_results = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.meet.name} {self.distance}{self.unit} ({self.sex})"
