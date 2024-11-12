@@ -7,10 +7,12 @@
 <h1>{{ race.meet.date.year }} {{ race.meet.name }}</h1>
 <h2>{{ race.get_display_distance }} - {{ race.get_sex_display }}</h2>
 
-{% if race.official_results %}
-<p class="mb-3">
-    <a href="{{ race.official_results }}">Official results</a>
-</p>
+{% if race.officialresult_set.all %}
+    <div class="mb-3">
+    {% for official_result in race.officialresult_set.all %}
+        <a href="{{ official_result.link }}">{{ official_result.name }}</a>{% if not forloop.last %} | {% endif %}
+    {% endfor %}
+    </div>
 {% endif %}
 
 <div class="row g-4">
