@@ -193,6 +193,7 @@ class OfficialResult(models.Model):
     """
     
     race = models.ForeignKey(Race, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50, default="Official Results")
     link = models.URLField()
         
 class Runner(models.Model):
