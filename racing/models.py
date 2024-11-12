@@ -89,6 +89,9 @@ class Race(models.Model):
     time = models.TimeField(null=True, blank=True)
     sex = models.CharField(max_length=1, choices=Sex, default=Sex.MIXED)
     official_results = models.URLField(blank=True, null=True)
+    
+    scorers = models.IntegerField(default=5)
+    displacers = models.IntegerField(default=2)
 
     def __str__(self):
         return f"{self.meet.name} {self.distance}{self.unit} ({self.sex})"
@@ -116,17 +119,13 @@ class Race(models.Model):
         """
         return f'{floatformat(self.distance, "-1")} {self.unit}'
     
-    def top_teams(self):
-        conferences = self.meet.conferences.all()
-        if conferences.count() == 1 and conferences.first().short_name == "RSEQ":
-            return self.score_teams(5, 14)
-        
+    def top_teams(self):        
         return self.score_teams()
     
     def top_results(self):
         return self.result_set.all().order_by('time', 'id')
 
-    def score_teams(self, scoring_finisher_count: int = 5, maximum_team_size: int = 7):
+    def score_teams(self):
         """
         Scores teams and tracks scoring members + displacers.
         
@@ -134,6 +133,9 @@ class Race(models.Model):
             List of (team, TeamScore) tuples sorted by score ascending.
             TeamScore contains total score, scoring members and displacers.
         """
+        scoring_finisher_count = self.scorers
+        maximum_team_size = scoring_finisher_count + self.displacers
+        
         team_results = defaultdict(list)
         team_scores = {}  # Will store TeamScore objects
                     
