@@ -33,6 +33,13 @@ class Team(models.Model):
 
     This is often a school, but could also be a club or other organization.
     """
+    
+    class Division(models.TextChoices):
+        USPORTS = "USPORTS", "U Sports"
+        CLUB = "CLUB", "Club"
+        HIGH_SCHOOL = "HS", "High School"
+    
+    division = models.CharField(max_length=10, choices=Division, default=Division.USPORTS)
 
     short_name = models.CharField(max_length=12)
     full_name = models.CharField(max_length=50, unique=True)
