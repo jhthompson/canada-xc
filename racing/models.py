@@ -88,7 +88,6 @@ class Race(models.Model):
     unit = models.CharField(choices=UNIT_CHOICES, max_length=2, default="km")
     time = models.TimeField(null=True, blank=True)
     sex = models.CharField(max_length=1, choices=Sex, default=Sex.MIXED)
-    official_results = models.URLField(blank=True, null=True)
     
     scorers = models.IntegerField(default=5)
     displacers = models.IntegerField(default=2)
@@ -187,7 +186,14 @@ class Race(models.Model):
             team_results[team].append(result)
                                     
         return sorted(team_scores.items(), key=lambda x: x[1].score)
-            
+
+class OfficialResult(models.Model):
+    """
+    A link to a race's official results
+    """
+    
+    race = models.ForeignKey(Race, on_delete=models.CASCADE)
+    link = models.URLField()
         
 class Runner(models.Model):
     """
