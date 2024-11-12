@@ -30,7 +30,7 @@ class RunnerAdmin(admin.ModelAdmin):
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
-    list_display = ("short_name", "full_name")
+    list_display = ("short_name", "full_name", "division")
 
 class RaceInline(admin.TabularInline):
     model = Race
