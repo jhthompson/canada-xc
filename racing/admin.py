@@ -28,9 +28,16 @@ class RunnerAdmin(admin.ModelAdmin):
     list_display = ("name", "sex", "birth_date")
     prepopulated_fields = {"slug": ("name",)}
 
+@admin.action(description="Set division as U Sports")
+def set_division_usports(modeladmin, request, queryset):
+    for team in queryset:
+        team.division = "USPORTS"
+        team.save()
+
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
-    list_display = ("short_name", "full_name")
+    list_display = ("short_name", "full_name", "division")
+    actions = [set_division_usports]
 
 class RaceInline(admin.TabularInline):
     model = Race
