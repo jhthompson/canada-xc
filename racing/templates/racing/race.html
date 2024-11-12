@@ -7,6 +7,12 @@
 <h1>{{ race.meet.date.year }} {{ race.meet.name }}</h1>
 <h2>{{ race.get_display_distance }} - {{ race.get_sex_display }}</h2>
 
+{% if race.official_results %}
+<p class="mb-3">
+    <a href="{{ race.official_results }}">Official results</a>
+</p>
+{% endif %}
+
 <div class="row g-4">
     <div class="col-lg-6">
         <h3>Individual Results</h3>
