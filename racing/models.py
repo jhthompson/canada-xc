@@ -82,6 +82,7 @@ class Race(models.Model):
     """
 
     UNIT_CHOICES = [("km", "km"), ("mi", "miles")]
+    TYPE_CHOICES = [("OPEN", "Open"), ("USPORTS", "U Sports")]
 
     meet = models.ForeignKey(Meet, on_delete=models.CASCADE)
     distance = models.DecimalField(max_digits=5, decimal_places=2)
@@ -92,7 +93,7 @@ class Race(models.Model):
     scorers = models.IntegerField(default=5)
     displacers = models.IntegerField(default=2)
     
-    
+    type = models.CharField(choices = TYPE_CHOICES, max_length=50, default="OPEN")
 
     def __str__(self):
         return f"{self.meet.name} {self.distance}{self.unit} ({self.sex})"
