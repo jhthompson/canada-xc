@@ -39,7 +39,7 @@ class Team(models.Model):
         CLUB = "CLUB", "Club"
         HIGH_SCHOOL = "HS", "High School"
     
-    division = models.CharField(max_length=10, choices=Division, default=Division.USPORTS)
+    division = models.CharField(max_length=10, choices=Division, default=Division.CLUB)
 
     short_name = models.CharField(max_length=12)
     full_name = models.CharField(max_length=50, unique=True)
@@ -91,6 +91,8 @@ class Race(models.Model):
     
     scorers = models.IntegerField(default=5)
     displacers = models.IntegerField(default=2)
+    
+    
 
     def __str__(self):
         return f"{self.meet.name} {self.distance}{self.unit} ({self.sex})"
