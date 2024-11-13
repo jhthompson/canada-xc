@@ -130,16 +130,13 @@ class Race(models.Model):
     def score_teams(self):
         """
         Scores teams and tracks scoring members + displacers.
-        
-        Returns:
-            List of (team, TeamScore) tuples sorted by score ascending.
-            TeamScore contains total score, scoring members and displacers.
+        Only scores USPORTS teams if race type is USPORTS.
         """
         scoring_finisher_count = self.scorers
         maximum_team_size = scoring_finisher_count + self.displacers
         
         team_results = defaultdict(list)
-        team_scores = {}  # Will store TeamScore objects
+        team_scores = {}
                     
         results = self.top_results()
         
@@ -161,12 +158,16 @@ class Race(models.Model):
 
         # Calculate points manually
         team_finishers_count = Counter(result.team for result in results)
-        scoring_teams = {
-            team for team, count 
-            in team_finishers_count.items()
-            if count >= scoring_finisher_count
-        }
         
+        # Filter for USPORTS teams if race type is USPORTS
+        scoring_teams = set()
+        for team, count in team_finishers_count.items():
+            if count >= scoring_finisher_count:
+                if self.type == "USPORTS" and team.division != Team.Division.USPORTS:
+                    continue
+                scoring_teams.add(team)
+        
+        # Rest of scoring logic remains the same
         points = 1
         for result in results:
             team = result.team
