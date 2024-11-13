@@ -7,7 +7,16 @@ from django import forms
 from django.contrib import admin
 from django.contrib.admin.widgets import AutocompleteSelect
 
-from racing.models import Conference, Meet, OfficialResult, Race, Result, RosterSpot, Runner, Team
+from racing.models import (
+    Conference,
+    Meet,
+    OfficialResult,
+    Race,
+    Result,
+    RosterSpot,
+    Runner,
+    Team,
+)
 
 
 @admin.register(Conference)
@@ -27,6 +36,7 @@ class RunnerAdmin(admin.ModelAdmin):
     inlines = [RosterSpotInline, ResultInline]
     list_display = ("name", "sex", "birth_date")
     prepopulated_fields = {"slug": ("name",)}
+    search_fields = ["name"]
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
@@ -35,7 +45,6 @@ class TeamAdmin(admin.ModelAdmin):
 class RaceInline(admin.TabularInline):
     model = Race
     extra = 1
-
 
 @admin.register(Meet)
 class MeetAdmin(admin.ModelAdmin):
