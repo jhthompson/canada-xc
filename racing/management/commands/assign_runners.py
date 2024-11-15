@@ -1,3 +1,5 @@
+import unicodedata
+
 from thefuzz import fuzz
 
 from django.core.management.base import BaseCommand
@@ -53,6 +55,10 @@ class Command(BaseCommand):
         ))
         return roster_spot
 
+    def _normalize_text(self, text: str) -> str:
+        """Normalize unicode text by removing accents and converting to lowercase."""
+        return unicodedata.normalize('NFKD', text.lower()).encode('ASCII', 'ignore').decode('ASCII')
+
     def handle(self, *args, **kwargs):
         race_id = kwargs['race_id']
         results = Result.objects.filter(race_id=race_id, runner__isnull=True)
@@ -79,9 +85,11 @@ class Command(BaseCommand):
             # Try fuzzy matching if no exact match
             fuzzy_matches = []
             all_runners = Runner.objects.filter(sex=result.race.sex)
+            normalized_result_name = self._normalize_text(result.name)
             
             for runner in all_runners:
-                ratio = fuzz.ratio(result.name.lower(), runner.name.lower())
+                normalized_runner_name = self._normalize_text(runner.name)
+                ratio = fuzz.ratio(normalized_result_name, normalized_runner_name)
                 if ratio >= self.SIMILARITY_THRESHOLD:
                     fuzzy_matches.append((runner, ratio))
             
