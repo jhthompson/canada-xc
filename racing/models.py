@@ -73,6 +73,7 @@ class TeamScore:
     score: int
     scoring_members: list[tuple['Result', int]]  # (result, points)
     displacers: list[tuple['Result', int]]  # (result, points)
+    tiebreaker_points: int = float('inf')  # infinity if none exists
 
 class Race(models.Model):
     """
@@ -152,9 +153,12 @@ class Race(models.Model):
                         team_scores[team].scoring_members.append((result, result.points))
                     elif len(team_results[team]) < maximum_team_size:
                         team_scores[team].displacers.append((result, result.points))
+                        if len(team_results[team]) == scoring_finisher_count:
+                            # First non-scoring runner
+                            team_scores[team].tiebreaker_points = len(list(filter(lambda x: x.points is not None, results[:results.index(result)]))) + 1
                 team_results[team].append(result)
                     
-            return sorted(team_scores.items(), key=lambda x: x[1].score)
+            return sorted(team_scores.items(), key=lambda x: (x[1].score, x[1].tiebreaker_points))
 
         # Calculate points manually
         team_finishers_count = Counter(result.team for result in results)
@@ -183,13 +187,16 @@ class Race(models.Model):
                 elif len(team_results[team]) < maximum_team_size:
                     # This finisher is a displacer
                     team_scores[team].displacers.append((result, points))
+                    if len(team_results[team]) == scoring_finisher_count:
+                        # First non-scoring runner
+                        team_scores[team].tiebreaker_points = points
                     
                 if len(team_results[team]) < maximum_team_size:
                     points += 1
                     
             team_results[team].append(result)
                                     
-        return sorted(team_scores.items(), key=lambda x: x[1].score)
+        return sorted(team_scores.items(), key=lambda x: (x[1].score, x[1].tiebreaker_points))
 
 class OfficialResult(models.Model):
     """
