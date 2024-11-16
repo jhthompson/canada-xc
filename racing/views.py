@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
 
-from racing.models import Meet, Race, RosterSpot, Runner, Team
+from racing.models import Conference, Meet, Race, RosterSpot, Runner, Team
 
 
 def index(request, conference_short_name=None):
@@ -64,7 +64,19 @@ def runner(request, slug):
 def results(request):
     meets = Meet.objects.filter(date__lte=timezone.now()).order_by("-date")
     
-    return render(request, "racing/results.html", {"meets": meets})
+    if conference_short_name := request.GET.get('conference'):
+        meets = meets.filter(conferences__short_name=conference_short_name)
+
+    if request.htmx:
+        template = "racing/partials/results_list.html"
+    else:
+        template = "racing/results.html"
+
+    return render(request, template, {
+        "meets": meets,
+        "conferences": Conference.objects.all(),
+        "selected_conference": conference_short_name
+    })
 
 def roster(request, year: int, slug: str):
     team = get_object_or_404(Team, slug=slug)

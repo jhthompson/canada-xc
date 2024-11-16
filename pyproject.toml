@@ -5,6 +5,7 @@ description = "Django application for Canadian cross country running"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "django-htmx>=1.21.0",
     "django-import-export>=4.1.1",
     "django>=5.1.2",
     "gunicorn>=23.0.0",
