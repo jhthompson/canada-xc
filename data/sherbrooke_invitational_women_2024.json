@@ -1,0 +1,5113 @@
+{
+    "totalItems": 69,
+    "totalPages": 1,
+    "currentPage": 0,
+    "results": [
+        {
+            "id": 1427668,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427667,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 448,
+                "firstName": "Laurence",
+                "lastName": "Gauthier",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 1,
+            "groupRank": 1,
+            "genderRank": 1,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 448,
+                "epochTime": 1728747038698129,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1796698129,
+            "lastReadingFromParticipant": 1728747038698129,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1796698129,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427671,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427670,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 601,
+                "firstName": "Elisa",
+                "lastName": "Tripotin",
+                "team": "UQAM Citadins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 2,
+            "groupRank": 2,
+            "genderRank": 2,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 601,
+                "epochTime": 1728747051765045,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1809765045,
+            "lastReadingFromParticipant": 1728747051765045,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1809765045,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427674,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427673,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 479,
+                "firstName": "Marine",
+                "lastName": "Garnier",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 3,
+            "groupRank": 3,
+            "genderRank": 3,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 479,
+                "epochTime": 1728747075811669,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1833811669,
+            "lastReadingFromParticipant": 1728747075811669,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1833811669,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427677,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427676,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 524,
+                "firstName": "Abene",
+                "lastName": "Glasgow",
+                "team": "McGill",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 4,
+            "groupRank": 4,
+            "genderRank": 4,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 524,
+                "epochTime": 1728747123201646,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1881201646,
+            "lastReadingFromParticipant": 1728747123201646,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1881201646,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427680,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427679,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 458,
+                "firstName": "Marie-Renee",
+                "lastName": "Emond",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 5,
+            "groupRank": 5,
+            "genderRank": 5,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 458,
+                "epochTime": 1728747125238202,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1883238202,
+            "lastReadingFromParticipant": 1728747125238202,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1883238202,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1428030,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427682,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 473,
+                "firstName": "Meredith",
+                "lastName": "Boyer",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 6,
+            "groupRank": 6,
+            "genderRank": 6,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 473,
+                "epochTime": 1728747131293000,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1889293000,
+            "lastReadingFromParticipant": 1728747131293000,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1889293000,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427686,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427685,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 435,
+                "firstName": "Laurianne",
+                "lastName": "Heynemand",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 7,
+            "groupRank": 7,
+            "genderRank": 7,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 435,
+                "epochTime": 1728747137041951,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1895041951,
+            "lastReadingFromParticipant": 1728747137041951,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1895041951,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427689,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427688,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 523,
+                "firstName": "Chloe",
+                "lastName": "Desjardins",
+                "team": "McGill",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 8,
+            "groupRank": 8,
+            "genderRank": 8,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 523,
+                "epochTime": 1728747141354597,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1899354597,
+            "lastReadingFromParticipant": 1728747141354597,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1899354597,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427692,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427691,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 609,
+                "firstName": "Louisiane",
+                "lastName": "Le Bail",
+                "team": "UQAM Citadins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 9,
+            "groupRank": 9,
+            "genderRank": 9,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 609,
+                "epochTime": 1728747150503530,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1908503530,
+            "lastReadingFromParticipant": 1728747150503530,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1908503530,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427695,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427694,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 478,
+                "firstName": "Klara",
+                "lastName": "Gal",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 10,
+            "groupRank": 1,
+            "genderRank": 10,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 478,
+                "epochTime": 1728747152745075,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1910745075,
+            "lastReadingFromParticipant": 1728747152745075,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1910745075,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427698,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427697,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 542,
+                "firstName": "Melina",
+                "lastName": "Hamel",
+                "team": "Ottawa Gee-Gees",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 11,
+            "groupRank": 10,
+            "genderRank": 11,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 542,
+                "epochTime": 1728747162638229,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1920638229,
+            "lastReadingFromParticipant": 1728747162638229,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1920638229,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427701,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427700,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 517,
+                "firstName": "Sophie",
+                "lastName": "Rashid-Cocker",
+                "team": "McGill",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 12,
+            "groupRank": 11,
+            "genderRank": 12,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 517,
+                "epochTime": 1728747169539668,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1927539668,
+            "lastReadingFromParticipant": 1728747169539668,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1927539668,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427704,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427703,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 425,
+                "firstName": "Angele-Emilie",
+                "lastName": "Berube",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 13,
+            "groupRank": 12,
+            "genderRank": 13,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 425,
+                "epochTime": 1728747172193816,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1930193816,
+            "lastReadingFromParticipant": 1728747172193816,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1930193816,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427707,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427706,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 434,
+                "firstName": "Marie-Ange",
+                "lastName": "Hebert",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 14,
+            "groupRank": 13,
+            "genderRank": 14,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 434,
+                "epochTime": 1728747181845091,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1939845091,
+            "lastReadingFromParticipant": 1728747181845091,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1939845091,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427710,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427709,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 470,
+                "firstName": "Marick",
+                "lastName": "Thibault",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 15,
+            "groupRank": 14,
+            "genderRank": 15,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 470,
+                "epochTime": 1728747182272923,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1940272923,
+            "lastReadingFromParticipant": 1728747182272923,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1940272923,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427713,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427712,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 457,
+                "firstName": "Maine",
+                "lastName": "Dupuis-Azizah",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 16,
+            "groupRank": 2,
+            "genderRank": 16,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 457,
+                "epochTime": 1728747182632487,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1940632487,
+            "lastReadingFromParticipant": 1728747182632487,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1940632487,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427719,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427718,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 520,
+                "firstName": "Sofia",
+                "lastName": "Veilleux",
+                "team": "McGill",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 17,
+            "groupRank": 15,
+            "genderRank": 17,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 520,
+                "epochTime": 1728747186275889,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1944275889,
+            "lastReadingFromParticipant": 1728747186275889,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1944275889,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427722,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427721,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 519,
+                "firstName": "Zoe",
+                "lastName": "Gardiner",
+                "team": "McGill",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 18,
+            "groupRank": 16,
+            "genderRank": 18,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 519,
+                "epochTime": 1728747190042279,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1948042279,
+            "lastReadingFromParticipant": 1728747190042279,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1948042279,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427725,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427724,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 432,
+                "firstName": "Veronique",
+                "lastName": "Ducharme",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 19,
+            "groupRank": 17,
+            "genderRank": 19,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 432,
+                "epochTime": 1728747192437008,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1950437008,
+            "lastReadingFromParticipant": 1728747192437008,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1950437008,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427728,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427727,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 424,
+                "firstName": "Elsa",
+                "lastName": "Benhamou",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 20,
+            "groupRank": 18,
+            "genderRank": 20,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 424,
+                "epochTime": 1728747195128715,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1953128715,
+            "lastReadingFromParticipant": 1728747195128715,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1953128715,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427731,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427730,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 431,
+                "firstName": "Eloise",
+                "lastName": "Dube",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 21,
+            "groupRank": 19,
+            "genderRank": 21,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 431,
+                "epochTime": 1728747196152586,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1954152586,
+            "lastReadingFromParticipant": 1728747196152586,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1954152586,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427734,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427733,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 423,
+                "firstName": "Juliette",
+                "lastName": "Belanger",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 22,
+            "groupRank": 20,
+            "genderRank": 22,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 423,
+                "epochTime": 1728747197731874,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1955731874,
+            "lastReadingFromParticipant": 1728747197731874,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1955731874,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427737,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427736,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 426,
+                "firstName": "Elana",
+                "lastName": "Camire Matveyenko",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 23,
+            "groupRank": 21,
+            "genderRank": 23,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 426,
+                "epochTime": 1728747200490581,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1958490581,
+            "lastReadingFromParticipant": 1728747200490581,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1958490581,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427740,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427739,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 453,
+                "firstName": "Marie-Soleil",
+                "lastName": "Courchesne",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 24,
+            "groupRank": 22,
+            "genderRank": 24,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 453,
+                "epochTime": 1728747220122107,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1978122107,
+            "lastReadingFromParticipant": 1728747220122107,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1978122107,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427743,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427742,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 485,
+                "firstName": "Victoria",
+                "lastName": "LeBlanc",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 25,
+            "groupRank": 23,
+            "genderRank": 25,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 485,
+                "epochTime": 1728747222330629,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1980330629,
+            "lastReadingFromParticipant": 1728747222330629,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1980330629,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427746,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427745,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 436,
+                "firstName": "Sandrine",
+                "lastName": "Marin",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 26,
+            "groupRank": 24,
+            "genderRank": 26,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 436,
+                "epochTime": 1728747239831535,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 1997831535,
+            "lastReadingFromParticipant": 1728747239831535,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 1997831535,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427749,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427748,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 618,
+                "firstName": "Charlotte",
+                "lastName": "Edge",
+                "team": null,
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 27,
+            "groupRank": 3,
+            "genderRank": 27,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 618,
+                "epochTime": 1728747254796169,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2012796169,
+            "lastReadingFromParticipant": 1728747254796169,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2012796169,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427752,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427751,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 472,
+                "firstName": "Marie-Pierre",
+                "lastName": "Bouffard",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 28,
+            "groupRank": 25,
+            "genderRank": 28,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 472,
+                "epochTime": 1728747256625771,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2014625771,
+            "lastReadingFromParticipant": 1728747256625771,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2014625771,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427755,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427754,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 592,
+                "firstName": "Alyssa",
+                "lastName": "Roberge",
+                "team": "Remparts",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 29,
+            "groupRank": 26,
+            "genderRank": 29,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 592,
+                "epochTime": 1728747261742153,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2019742153,
+            "lastReadingFromParticipant": 1728747261742153,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2019742153,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427758,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427757,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 475,
+                "firstName": "Justine",
+                "lastName": "Champagne",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 30,
+            "groupRank": 27,
+            "genderRank": 30,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 475,
+                "epochTime": 1728747274081241,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2032081241,
+            "lastReadingFromParticipant": 1728747274081241,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2032081241,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427761,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427760,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 421,
+                "firstName": "Mary-Lune",
+                "lastName": "Baril",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 31,
+            "groupRank": 28,
+            "genderRank": 31,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 421,
+                "epochTime": 1728747293206985,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2051206985,
+            "lastReadingFromParticipant": 1728747293206985,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2051206985,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427764,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427763,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 488,
+                "firstName": "Eliana",
+                "lastName": "Portillo-Laflamme",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 32,
+            "groupRank": 4,
+            "genderRank": 32,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 488,
+                "epochTime": 1728747293207772,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2051207772,
+            "lastReadingFromParticipant": 1728747293207772,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2051207772,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427767,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427766,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 557,
+                "firstName": "Alice",
+                "lastName": "Roze",
+                "team": "Ecole de technologie superieure",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 33,
+            "groupRank": 29,
+            "genderRank": 33,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 557,
+                "epochTime": 1728747293946944,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2051946944,
+            "lastReadingFromParticipant": 1728747293946944,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2051946944,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427770,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427769,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 550,
+                "firstName": "Sara",
+                "lastName": "Gross",
+                "team": "Carleton Ravens",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 34,
+            "groupRank": 5,
+            "genderRank": 34,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 550,
+                "epochTime": 1728747298321244,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2056321244,
+            "lastReadingFromParticipant": 1728747298321244,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2056321244,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427773,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427772,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 463,
+                "firstName": "Lea",
+                "lastName": "Gobeil",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 35,
+            "groupRank": 30,
+            "genderRank": 35,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 463,
+                "epochTime": 1728747299758773,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2057758773,
+            "lastReadingFromParticipant": 1728747299758773,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2057758773,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427776,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427775,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 450,
+                "firstName": "Laura",
+                "lastName": "Auclair",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 36,
+            "groupRank": 31,
+            "genderRank": 36,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 450,
+                "epochTime": 1728747303029996,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2061029996,
+            "lastReadingFromParticipant": 1728747303029996,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2061029996,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427779,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427778,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 583,
+                "firstName": "Marianne",
+                "lastName": "Bogus",
+                "team": "UQAC",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 37,
+            "groupRank": 32,
+            "genderRank": 37,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 583,
+                "epochTime": 1728747311852410,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2069852410,
+            "lastReadingFromParticipant": 1728747311852410,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2069852410,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427782,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427781,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 427,
+                "firstName": "Emy-Jade",
+                "lastName": "Caron",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 38,
+            "groupRank": 33,
+            "genderRank": 38,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 427,
+                "epochTime": 1728747316669592,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2074669592,
+            "lastReadingFromParticipant": 1728747316669592,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2074669592,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427785,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427784,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 599,
+                "firstName": "Dominique",
+                "lastName": "Gelinas",
+                "team": "UQAM Citadins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 39,
+            "groupRank": 34,
+            "genderRank": 39,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 599,
+                "epochTime": 1728747328709464,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2086709464,
+            "lastReadingFromParticipant": 1728747328709464,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2086709464,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427788,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427787,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 541,
+                "firstName": "Kylee",
+                "lastName": "Fowler",
+                "team": "Ottawa Gee-Gees",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 40,
+            "groupRank": 35,
+            "genderRank": 40,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 541,
+                "epochTime": 1728747331107813,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2089107813,
+            "lastReadingFromParticipant": 1728747331107813,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2089107813,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427791,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427790,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 521,
+                "firstName": "Arowyn",
+                "lastName": "Fitzpatrick",
+                "team": "McGill",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 41,
+            "groupRank": 36,
+            "genderRank": 41,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 521,
+                "epochTime": 1728747336042818,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2094042818,
+            "lastReadingFromParticipant": 1728747336042818,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2094042818,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427794,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427793,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 429,
+                "firstName": "Emmanuelle",
+                "lastName": "Chaput",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 42,
+            "groupRank": 37,
+            "genderRank": 42,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 429,
+                "epochTime": 1728747343002946,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2101002946,
+            "lastReadingFromParticipant": 1728747343002946,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2101002946,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427797,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427796,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 489,
+                "firstName": "Justine",
+                "lastName": "Ratelle",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 43,
+            "groupRank": 38,
+            "genderRank": 43,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 489,
+                "epochTime": 1728747370847513,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2128847513,
+            "lastReadingFromParticipant": 1728747370847513,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2128847513,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427800,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427799,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 617,
+                "firstName": "Gabrielle",
+                "lastName": "Caron",
+                "team": "UQAC",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 44,
+            "groupRank": 39,
+            "genderRank": 44,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 617,
+                "epochTime": 1728747378588641,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2136588641,
+            "lastReadingFromParticipant": 1728747378588641,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2136588641,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427803,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427802,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 580,
+                "firstName": "Noee",
+                "lastName": "Jean",
+                "team": "UQAC",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 45,
+            "groupRank": 40,
+            "genderRank": 45,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 580,
+                "epochTime": 1728747381602927,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2139602927,
+            "lastReadingFromParticipant": 1728747381602927,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2139602927,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427806,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427805,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 462,
+                "firstName": "Rosalie",
+                "lastName": "Gaudet",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 46,
+            "groupRank": 41,
+            "genderRank": 46,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 462,
+                "epochTime": 1728747388121655,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2146121655,
+            "lastReadingFromParticipant": 1728747388121655,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2146121655,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427809,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427808,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 469,
+                "firstName": "Elizabeth",
+                "lastName": "Tetu",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 47,
+            "groupRank": 42,
+            "genderRank": 47,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 469,
+                "epochTime": 1728747394627758,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2152627758,
+            "lastReadingFromParticipant": 1728747394627758,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2152627758,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427815,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427814,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 459,
+                "firstName": "Marie-Eve",
+                "lastName": "Fortier",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 48,
+            "groupRank": 43,
+            "genderRank": 48,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 459,
+                "epochTime": 1728747398313469,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2156313469,
+            "lastReadingFromParticipant": 1728747398313469,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2156313469,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427818,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427817,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 471,
+                "firstName": "Romane",
+                "lastName": "Archambault",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 49,
+            "groupRank": 6,
+            "genderRank": 49,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 471,
+                "epochTime": 1728747398548551,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2156548551,
+            "lastReadingFromParticipant": 1728747398548551,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2156548551,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427821,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427820,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 611,
+                "firstName": "Marilou",
+                "lastName": "Moreau",
+                "team": "UQAM Citadins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 50,
+            "groupRank": 44,
+            "genderRank": 50,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 611,
+                "epochTime": 1728747400913277,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2158913277,
+            "lastReadingFromParticipant": 1728747400913277,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2158913277,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427824,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427823,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 556,
+                "firstName": "Ariane",
+                "lastName": "Brasselet",
+                "team": "Ecole de technologie superieure",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 51,
+            "groupRank": 45,
+            "genderRank": 51,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 556,
+                "epochTime": 1728747401638689,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2159638689,
+            "lastReadingFromParticipant": 1728747401638689,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2159638689,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427827,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427826,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 548,
+                "firstName": "Katarina",
+                "lastName": "Culhane",
+                "team": "Ottawa Gee-Gees",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 52,
+            "groupRank": 7,
+            "genderRank": 52,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 548,
+                "epochTime": 1728747404474495,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2162474495,
+            "lastReadingFromParticipant": 1728747404474495,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2162474495,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427833,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427832,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 480,
+                "firstName": "Elodie",
+                "lastName": "Grenier",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 53,
+            "groupRank": 46,
+            "genderRank": 53,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 480,
+                "epochTime": 1728747415916293,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2173916293,
+            "lastReadingFromParticipant": 1728747415916293,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2173916293,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427836,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427835,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 547,
+                "firstName": "Elana",
+                "lastName": "Tyman",
+                "team": "Ottawa Gee-Gees",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 54,
+            "groupRank": 47,
+            "genderRank": 54,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 547,
+                "epochTime": 1728747422534401,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2180534401,
+            "lastReadingFromParticipant": 1728747422534401,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2180534401,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427839,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427838,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 454,
+                "firstName": "Julianne",
+                "lastName": "Couture",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 55,
+            "groupRank": 48,
+            "genderRank": 55,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 454,
+                "epochTime": 1728747432768695,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2190768695,
+            "lastReadingFromParticipant": 1728747432768695,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2190768695,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427842,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427841,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 549,
+                "firstName": "Grace",
+                "lastName": "Farrington",
+                "team": "Ottawa Gee-Gees",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 56,
+            "groupRank": 8,
+            "genderRank": 56,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 549,
+                "epochTime": 1728747436804058,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2194804058,
+            "lastReadingFromParticipant": 1728747436804058,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2194804058,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427848,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427847,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 442,
+                "firstName": "Raphaelle",
+                "lastName": "Rivard",
+                "team": "Sherbrooke Vert-et-Or",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 57,
+            "groupRank": 49,
+            "genderRank": 57,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 442,
+                "epochTime": 1728747449700179,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2207700179,
+            "lastReadingFromParticipant": 1728747449700179,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2207700179,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427854,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427853,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 461,
+                "firstName": "Maude",
+                "lastName": "Gagnon",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 58,
+            "groupRank": 1,
+            "genderRank": 58,
+            "ageBracket": {
+                "id": 366,
+                "maxAge": 39,
+                "minAge": 30
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 461,
+                "epochTime": 1728747472570103,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2230570103,
+            "lastReadingFromParticipant": 1728747472570103,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2230570103,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427857,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427856,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 492,
+                "firstName": "Josephine",
+                "lastName": "Wild",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 59,
+            "groupRank": 50,
+            "genderRank": 59,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 492,
+                "epochTime": 1728747487856039,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2245856039,
+            "lastReadingFromParticipant": 1728747487856039,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2245856039,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427860,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427859,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 484,
+                "firstName": "Kassandra",
+                "lastName": "Langelier",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 60,
+            "groupRank": 51,
+            "genderRank": 60,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 484,
+                "epochTime": 1728747492730064,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2250730064,
+            "lastReadingFromParticipant": 1728747492730064,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2250730064,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427872,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427871,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 555,
+                "firstName": "Janelle",
+                "lastName": "Allanach",
+                "team": "Ottawa Gee-Gees",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 61,
+            "groupRank": 52,
+            "genderRank": 61,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 555,
+                "epochTime": 1728747528574375,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2286574375,
+            "lastReadingFromParticipant": 1728747528574375,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2286574375,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427875,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427874,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 455,
+                "firstName": "Emy",
+                "lastName": "Decelles",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 62,
+            "groupRank": 53,
+            "genderRank": 62,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 455,
+                "epochTime": 1728747531810627,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2289810627,
+            "lastReadingFromParticipant": 1728747531810627,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2289810627,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427878,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427877,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 483,
+                "firstName": "Maxine",
+                "lastName": "Kang-Auger",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 63,
+            "groupRank": 9,
+            "genderRank": 63,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 483,
+                "epochTime": 1728747541586641,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2299586641,
+            "lastReadingFromParticipant": 1728747541586641,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2299586641,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427887,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427886,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 558,
+                "firstName": "Lisa",
+                "lastName": "Van Assel",
+                "team": "Ecole de technologie superieure",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 64,
+            "groupRank": 54,
+            "genderRank": 64,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 558,
+                "epochTime": 1728747650139191,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2408139191,
+            "lastReadingFromParticipant": 1728747650139191,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2408139191,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427890,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427889,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 594,
+                "firstName": "Clemence",
+                "lastName": "Imbeault",
+                "team": "Remparts",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 65,
+            "groupRank": 10,
+            "genderRank": 65,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 594,
+                "epochTime": 1728747679334755,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2437334755,
+            "lastReadingFromParticipant": 1728747679334755,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2437334755,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427893,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427892,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 474,
+                "firstName": "Nada",
+                "lastName": "Chabibi",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 66,
+            "groupRank": 55,
+            "genderRank": 66,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 474,
+                "epochTime": 1728747689354323,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2447354323,
+            "lastReadingFromParticipant": 1728747689354323,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2447354323,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427896,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427895,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 551,
+                "firstName": "Sydney",
+                "lastName": "Nielsen",
+                "team": "Carleton Ravens",
+                "startWave": 0,
+                "gender": "f",
+                "state": 1,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": 67,
+            "groupRank": 56,
+            "genderRank": 67,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 551,
+                "epochTime": 1728747751954459,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2509954459,
+            "lastReadingFromParticipant": 1728747751954459,
+            "needToBeRanked": true,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2509954459,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427907,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427906,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 477,
+                "firstName": "Florence",
+                "lastName": "Dostaler",
+                "team": "Montreal Carabins",
+                "startWave": 0,
+                "gender": "f",
+                "state": 2,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": null,
+            "groupRank": null,
+            "genderRank": null,
+            "ageBracket": {
+                "id": 342,
+                "maxAge": 19,
+                "minAge": 13
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 477,
+                "epochTime": 4099698000000000,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2370952758000000,
+            "lastReadingFromParticipant": 4099698000000000,
+            "needToBeRanked": false,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2370952758000000,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        },
+        {
+            "id": 1427543,
+            "eventId": 1427533,
+            "eventName": "Vert & Or invitation Jean-Pierre Lemelin 2024",
+            "eventDate": 1728705600000,
+            "eventCategory": "8 km universitaire femme",
+            "eventCategoryDistance": 8000,
+            "participant": {
+                "id": 1427534,
+                "eventId": 1427533,
+                "eventCategory": "8 km universitaire femme",
+                "bib": 464,
+                "firstName": "Camelie",
+                "lastName": "Houle",
+                "team": "UQTR Patriotes",
+                "startWave": 0,
+                "gender": "f",
+                "state": 2,
+                "uniqueId": null,
+                "disciplineGroup": {
+                    "id": 115775,
+                    "name": "8 km universitaire femme",
+                    "disciplineGroupDiscipline": [
+                        {
+                            "disciplineOrder": 1,
+                            "lapMode": false,
+                            "infiniteLaps": false,
+                            "numberOfLapRequired": 1,
+                            "progressBarVisible": false,
+                            "goal": 0,
+                            "discipline": {
+                                "id": 115776,
+                                "name": "8 km",
+                                "description": "8 km",
+                                "distance": 8000
+                            }
+                        }
+                    ],
+                    "ageBracketGroup": null,
+                    "description": "8 km universitaire femme: 8 km"
+                }
+            },
+            "overallRank": null,
+            "groupRank": null,
+            "genderRank": null,
+            "ageBracket": {
+                "id": 33,
+                "maxAge": 29,
+                "minAge": 20
+            },
+            "startReading": null,
+            "finishReading": {
+                "epc": 464,
+                "epochTime": 4099698000000000,
+                "selectedEventId": 1427533,
+                "readingMode": {
+                    "id": 2,
+                    "name": "Arrivé"
+                }
+            },
+            "lapReadings": [],
+            "totalDuration": 2370952758000000,
+            "lastReadingFromParticipant": 4099698000000000,
+            "needToBeRanked": false,
+            "needToBeDeleted": false,
+            "status": null,
+            "gunStartTime": 1728745242000000,
+            "virtualSubmission": false,
+            "validated": true,
+            "gunTotalDuration": 2370952758000000,
+            "pictureProof": null,
+            "multiDisciplines": false,
+            "infiniteLaps": false
+        }
+    ]
+}
