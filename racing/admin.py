@@ -63,7 +63,7 @@ class ResultInline(admin.TabularInline):
 @admin.register(Race)
 class RaceAdmin(admin.ModelAdmin):
     inlines=[OfficialResultInline, ResultInline]
-    search_fields = ["name"]
+    search_fields = ["meet__name"]
 
 
 class ResultImportForm(ImportForm):
