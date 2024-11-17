@@ -12,7 +12,9 @@ dependencies = [
     "pillow>=11.0.0",
     "psycopg[c]>=3.2.3",
     "python-dotenv>=1.0.1",
+    "redis>=5.2.0",
     "sentry-sdk[django]>=2.18.0",
+    "sorl-thumbnail>=12.11.0",
     "thefuzz>=0.22.1",
 ]
 

@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 
-{% load humanize racing_extras static %}
+{% load humanize racing_extras static thumbnail %}
 
 {% block content %}
-<h1>{{ runner.name }}</h1>
+<h1>
+    {{ runner.name }}
+    {% comment %} TODO: this might not actually be the most recent headshot? {% endcomment %}
+    {% if runner.rosterspot_set.first.headshot %}{% thumbnail runner.rosterspot_set.first.headshot "75x75" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">{% endthumbnail %}{% endif %}
+</h1>
 
 <h2>Teams</h2>
 <div class="list-group mb-2">

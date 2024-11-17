@@ -29,7 +29,18 @@ def race(request, year: int, slug: str, race_info: tuple[int, str, str]):
     distance, unit, sex = race_info
     race = get_object_or_404(Race, meet=meet, distance=distance, unit=unit, sex=sex)
     
-    return render(request, "racing/race.html", {"race": race})
+    # For each result, attach the roster spot (for headshot)
+    results = []
+    for result in race.top_results():
+        roster_spot = RosterSpot.objects.filter(
+            runner=result.runner,
+            team=result.team,
+            year=race.meet.date.year
+        ).first()
+        result.roster_spot = roster_spot
+        results.append(result)
+    
+    return render(request, "racing/race.html", {"race": race, "results": results})
     
 def runners(request):
     return render(request, "racing/runners.html")

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load humanize racing_extras static %}
+{% load humanize racing_extras static thumbnail %}
 
 {% block content %}
 
@@ -19,17 +19,17 @@
     <div class="col-lg-6">
         <h3>Individual Results</h3>
         <div class="table-responsive">
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover align-middle">
                 <thead>
                     <tr>
                         <th scope="col">Place</th>
-                        <th scope="col">Name</th>
+                        <th scope="col" colspan=2>Name</th>
                         <th scope="col">Team</th>
                         <th scope="col">Time</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for result in race.top_results %}
+                    {% for result in results %}
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center">
@@ -48,6 +48,11 @@
                                     <a href="{{ result.runner.get_absolute_url }}">{{ result.name }}</a>
                                 {% else %}
                                     {{ result.name }}
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if result.roster_spot.headshot %}
+                                    {% if result.roster_spot %}{% thumbnail result.roster_spot.headshot "40x40" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">{% endthumbnail %}{% endif %}
                                 {% endif %}
                             </td>
                             <td>{{ result.team }}</td>

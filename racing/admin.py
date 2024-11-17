@@ -2,6 +2,7 @@ from import_export import fields, resources
 from import_export.admin import ImportExportModelAdmin
 from import_export.forms import ConfirmImportForm, ImportForm
 from import_export.widgets import ForeignKeyWidget
+from sorl.thumbnail.admin import AdminImageMixin
 
 from django import forms
 from django.contrib import admin
@@ -23,7 +24,7 @@ from racing.models import (
 class ConferenceAdmin(admin.ModelAdmin):
     list_display = ("short_name", "full_name", "logo")
 
-class RosterSpotInline(admin.TabularInline):
+class RosterSpotInline(AdminImageMixin, admin.TabularInline):
     model = RosterSpot
     extra = 1
     

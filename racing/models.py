@@ -1,6 +1,8 @@
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 
+from sorl.thumbnail import ImageField
+
 from django.db import models
 from django.template.defaultfilters import floatformat
 from django.urls import reverse
@@ -235,7 +237,7 @@ class RosterSpot(models.Model):
     runner = models.ForeignKey(Runner, on_delete=models.CASCADE)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
     year = models.IntegerField()
-    headshot = models.ImageField(upload_to="headshots", blank=True, null=True)
+    headshot = ImageField(upload_to="headshots", blank=True, null=True)
     
     def __str__(self):
         return f"{self.runner} roster spot on {self.team} in {self.year}"
