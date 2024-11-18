@@ -29,8 +29,8 @@
                             {% endfor %}
                         </div>
                     </div>
-                    <div class="d-flex justify-content-between gap-3">
-                        <div>
+                    <div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
+                        <div class="flex-fill">
                             <h4 class="h6">Team</h4>
                             {% for team, score in race.top_teams|slice:"3" %}
                                 <div class="d-flex align-items-center mb-2">
@@ -52,7 +52,7 @@
                                 <p class="text-muted fst-italic mb-0">No results</p>
                             {% endfor %}
                         </div>
-                        <div>
+                        <div class="flex-fill">
                             <h4 class="h6">Individual</h4>
                             {% for result in race.top_results|slice:":3" %}
                                 <div class="d-flex align-items-center mb-2">
