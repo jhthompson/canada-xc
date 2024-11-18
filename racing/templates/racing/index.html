@@ -19,7 +19,7 @@
                             </h3>
                             <p class="text-muted small mb-2">{{ race.meet.date }}</p>
                         </div>
-                        <div class="align-self-start text-end">
+                        <div class="align-self-start text-end d-none d-lg-block">
                             {% for conference in race.meet.conferences.all %}
                                 {% if conference.logo %}
                                     <img src="{{ conference.logo.url }}" alt="Conference logo" style="height: 2rem">
