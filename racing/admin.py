@@ -105,6 +105,7 @@ class ResultResource(resources.ModelResource):
 @admin.register(Result)
 class RaceResultAdmin(ImportExportModelAdmin):
     model = Result
+    search_fields = ["name"]
 
     resource_classes = [ResultResource]
     import_form_class = ResultImportForm
