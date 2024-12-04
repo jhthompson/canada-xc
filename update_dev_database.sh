@@ -27,6 +27,13 @@ EOF
 echo ✅ Took $SECONDS "$(plural second $SECONDS)"
 echo
 
+# sync media files
+SECONDS=0
+echo "⏰ Syncing media files..."
+rsync -av --progress jeremy@canadaxc.ca:/var/www/canadaxc.ca/media/ ./.media/
+echo ✅ Took $SECONDS "$(plural second $SECONDS)"
+echo
+
 # load into local database
 SECONDS=0
 echo "⏰ Recreating local database..."

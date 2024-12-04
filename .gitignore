@@ -155,8 +155,7 @@ dmypy.json
 cython_debug/
 
 # Django specific local media folder
-/headshots
-/conference_logos
+.media
 /cache
 
 # DB backups
