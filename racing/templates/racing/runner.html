@@ -2,6 +2,14 @@
 
 {% load humanize racing_extras static thumbnail %}
 
+{% block extra_head %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js@11.0.3/public/assets/styles/choices.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/choices.js@11.0.3/public/assets/scripts/choices.min.js"></script>
+{% endblock extra_head %}
+
 {% block content %}
 <h1>
     {{ runner.name }}
@@ -32,5 +40,42 @@
     {% endfor %}
 </div>
 
+<h2 class="mt-2">Head to Head</h2>
+<div class="card">
+    <div class="card-body p-0">
+        <div class="row g-0">
+            <div class="col-6 border-end">
+                <div class="p-3 bg-light border-bottom d-flex justify-content-end align-items-center h-100" style="border-top-left-radius: var(--bs-card-border-radius);">
+                    <h4 class="mb-0 text-center">{{ runnerA.name }}</h4>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 bg-light border-bottom d-flex justify-content-start align-items-center h-100" style="border-top-right-radius: var(--bs-card-border-radius);">
+                    <select 
+                        id="head-to-head-choices" 
+                        data-placeholder="Select a runner"
+                        hx-get="{% url 'runner' runnerA.slug %}"
+                        hx-push-url="true"
+                        hx-target="#head-to-head-results"
+                        name="head-to-head"
+                    >
+                        {% for runner in all_runners %}
+                            <option value="{{ runner.slug }}" {% if runner.slug == runnerB.slug %}selected{% endif %}>{{ runner.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <script>
+                        const element = document.querySelector('#head-to-head-choices');
+                        const choices = new Choices(element, {
+                            classNames: {
+                                containerOuter: ['choices', 'flex-grow-1', 'w-100', 'mb-0'],
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        {% include "racing/partials/head_to_head.html" %}
+    </div>
+</div>
 
 {% endblock content %}

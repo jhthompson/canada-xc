@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% load humanize racing_extras thumbnail %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Head to Head</h2>
+    <h3 class="text-center mb-4">{{ wins_a }} - {{ wins_b }}</h3>
+
+    <div class="card">
+        <div class="card-body p-0">
+            <div class="row g-0">
+                <div class="col-6 border-end">
+                    <div class="p-3 bg-light border-bottom d-flex flex-column flex-md-row justify-content-end align-items-center h-100" style="border-top-left-radius: var(--bs-card-border-radius);">
+                        <h4 class="mb-0 text-center order-1 order-md-0">{{ runnerA.name }}</h4>
+                        {% if runnerA.rosterspot_set.first.headshot %}
+                            {% thumbnail runnerA.rosterspot_set.first.headshot "75x75" crop="center top" as im %}
+                                <img class="rounded-circle border border-dark m-3 order-0 order-md-1" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                            {% endthumbnail %}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 bg-light border-bottom d-flex flex-column flex-md-row justify-content-start align-items-center h-100" style="border-top-right-radius: var(--bs-card-border-radius);">
+                        {% if runnerB.rosterspot_set.first.headshot %}
+                            {% thumbnail runnerB.rosterspot_set.first.headshot "75x75" crop="center top" as im %}
+                                <img class="rounded-circle border border-dark m-3" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                            {% endthumbnail %}  
+                        {% endif %}
+                        <input list="runners" id="runnerB" name="runnerB" class="form-control" placeholder="Select Runner B" value="{{ runnerB.name }}">
+                        <datalist id="runners">
+                            {% for runner in all_runners %}
+                                <option value="{{ runner.name }}" data-url="{% url 'head-to-head' runnerA.slug runner.slug %}"></option>
+                            {% endfor %}
+                        </datalist>
+                        <script>
+                            document.getElementById('runnerB').addEventListener('change', function() {
+                                var selectedOption = this.list.querySelector(`[value="${this.value}"]`);
+                                if (selectedOption) {
+                                    window.location.href = selectedOption.getAttribute('data-url');
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            {% for race in common_races %}
+            <div class="border-bottom {% if forloop.last %}border-bottom-0{% endif %}">
+                <div class="p-3 pb-0">
+                    <h5 class="mb-0 text-center">{{ race.meet.name }}</h5>
+                    <div class="text-center">{{ race.meet.date }}</div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-6">
+                        <div class="pt-2 p-3 text-end {% if race.runnerA.time < race.runnerB.time %}fw-bold {% else %}fw-light {% endif %}">
+                            {{ race.runnerA.time|finish_time }}
+                            <small>({{ race.runnerA.position|ordinal }})</small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="pt-2 p-3 text-start {% if race.runnerB.time < race.runnerA.time %}fw-bold {% else %}fw-light{% endif %}">
+                            {{ race.runnerB.time|finish_time }}
+                            <small>({{ race.runnerB.position|ordinal }})</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

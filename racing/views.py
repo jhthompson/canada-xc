@@ -67,10 +67,71 @@ def runner(request, slug):
         reverse=True
     )
     
-    return render(request, "racing/runner.html", {
+    context = {
         "runner": runner,
         "results": results_with_positions
-    })
+    }
+    
+    head_to_head_slug = request.GET.get('head-to-head')
+    context = context | get_head_to_head_context(runner.slug, head_to_head_slug)
+    
+    if request.htmx:
+        return render(request, "racing/partials/head_to_head.html", context)
+    else:
+        return render(request, "racing/runner.html", context)
+    
+def get_head_to_head_context(slug_a: str, slug_b: str):
+    a = get_object_or_404(Runner, slug=slug_a)
+    try:
+        b = Runner.objects.get(slug=slug_b)
+    except Runner.DoesNotExist:
+        return {
+            "runnerA": a,
+            "runnerB": None,
+            "common_races": [],
+            "wins_a": 0,
+            "wins_b": 0,
+            "all_runners": Runner.objects.filter(sex=a.sex)
+        }
+        
+    # Get all results for each runner
+    resultsA = a.result_set.all()
+    resultsB = b.result_set.all()
+    
+    # Find common races between the two result sets
+    common_races = []
+    for resultA in resultsA:
+        resultB = resultsB.filter(race=resultA.race).first()
+        if resultB:
+            common_races.append({
+                'race': resultA.race,
+                'meet': resultA.race.meet,
+                'runnerA': {
+                    'time': resultA.time,
+                    'position': list(resultA.race.top_results()).index(resultA) + 1
+                },
+                'runnerB': {
+                    'time': resultB.time,
+                    'position': list(resultB.race.top_results()).index(resultB) + 1
+                },
+                'time_diff': abs(resultA.time - resultB.time)
+            })
+    
+    # Sort by date descending
+    common_races.sort(key=lambda x: x['meet'].date, reverse=True)
+    
+    # Calculate win totals
+    wins_a = sum(1 for race in common_races if race['runnerA']['time'] < race['runnerB']['time'])
+    wins_b = sum(1 for race in common_races if race['runnerB']['time'] < race['runnerA']['time'])
+    
+    return {
+        "runnerA": a,
+        "runnerB": b,
+        "common_races": common_races,
+        "wins_a": wins_a,
+        "wins_b": wins_b,
+        "all_runners": Runner.objects.filter(sex=a.sex)
+    }
 
 def results(request):
     meets = Meet.objects.filter(date__lte=timezone.now()).order_by("-date")

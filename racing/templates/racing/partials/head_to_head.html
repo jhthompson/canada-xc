@@ -1,0 +1,31 @@
+{% load humanize racing_extras thumbnail %}
+
+<div id="head-to-head-results">
+    <div class="border-bottom my-2">
+        <h3 class="text-center">{{ wins_a }} - {{ wins_b }}</h3>
+    </div>
+    {% for race in common_races %}
+        <div class="border-bottom {% if forloop.last %}border-bottom-0{% endif %}">
+            <div class="p-3 pb-0">
+                <h5 class="mb-0 text-center">{{ race.meet.name }}</h5>
+                <div class="text-center">{{ race.meet.date }}</div>
+            </div>
+            <div class="row g-0">
+                <div class="col-6">
+                    <div class="pt-2 p-3 text-end {% if race.runnerA.time < race.runnerB.time %}fw-bold {% else %}fw-light {% endif %}">
+                        {{ race.runnerA.time|finish_time }}
+                        <small>({{ race.runnerA.position|ordinal }})</small>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="pt-2 p-3 text-start {% if race.runnerB.time < race.runnerA.time %}fw-bold {% else %}fw-light{% endif %}">
+                        {{ race.runnerB.time|finish_time }}
+                        <small>({{ race.runnerB.position|ordinal }})</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <div class="text-center fw-light fst-italic my-2">No races found</div>
+    {% endfor %}
+</div>
