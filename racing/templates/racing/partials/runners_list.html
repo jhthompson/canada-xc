@@ -1,0 +1,23 @@
+{% load thumbnail %}
+
+{% for runner in runners %}
+    <a href="{{ runner.get_absolute_url }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+        <div>
+            <p class="mb-0">{{ runner.name }}</p>
+            <span class="text-muted">
+                {% for team in runner.get_teams %}
+                    {{ team.short_name }}
+                {% endfor %}
+            </span>
+        </div>
+        {% with headshot=runner.get_headshot %}
+            {% if headshot %}
+                <div class="text-end">
+                    {% thumbnail headshot "50x50" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">{% endthumbnail %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </a>
+{% empty %}
+    <div class="list-group-item fst-italic">No runners found</div>
+{% endfor %}

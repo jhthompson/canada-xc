@@ -13,8 +13,11 @@
 {% block content %}
 <h1>
     {{ runner.name }}
-    {% comment %} TODO: this might not actually be the most recent headshot? {% endcomment %}
-    {% if runner.rosterspot_set.first.headshot %}{% thumbnail runner.rosterspot_set.first.headshot "75x75" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">{% endthumbnail %}{% endif %}
+    {% with headshot=runner.get_headshot %}
+        {% if headshot %}
+            {% thumbnail headshot "75x75" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">{% endthumbnail %}
+        {% endif %}
+    {% endwith %}
 </h1>
 
 <h2>Teams</h2>

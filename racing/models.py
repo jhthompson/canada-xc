@@ -226,6 +226,14 @@ class Runner(models.Model):
     def get_absolute_url(self):
         return reverse("runner", kwargs={"slug": self.slug})
     
+    def get_teams(self):
+        return Team.objects.filter(rosterspot__runner=self).order_by("-rosterspot__year").distinct()
+    
+    def get_headshot(self):
+        # Return the most recent headshot (if present), None otherwise
+        roster_spot = self.rosterspot_set.filter(headshot__isnull=False).order_by("-year").first()
+        return roster_spot.headshot if roster_spot else None
+    
         
 class RosterSpot(models.Model):
     """

@@ -43,7 +43,19 @@ def race(request, year: int, slug: str, race_info: tuple[int, str, str]):
     return render(request, "racing/race.html", {"race": race, "results": results})
     
 def runners(request):
-    return render(request, "racing/runners.html")
+    name = request.GET.get('name')
+    
+    if name:
+        runners = Runner.objects.filter(name__icontains=name).order_by("name").all()
+    else:
+        runners = Runner.objects.none()
+        
+    if request.htmx:
+        template = "racing/partials/runners_list.html"
+    else:
+        template = "racing/runners.html"
+        
+    return render(request, template, {"runners": runners})
 
 def runner(request, slug):
     runner = get_object_or_404(Runner, slug=slug)

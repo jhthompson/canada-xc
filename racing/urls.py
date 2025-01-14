@@ -1,7 +1,7 @@
 from django.urls import path, register_converter
 
 from racing.converters import ConferenceConverter, RaceConverter, YearConverter
-from racing.views import index, meet, race, results, roster, runner
+from racing.views import index, meet, race, results, roster, runner, runners
 
 register_converter(ConferenceConverter, "conference")
 register_converter(YearConverter, "year")
@@ -19,7 +19,7 @@ urlpatterns = [
     # path("schedule/", schedule, name="schedule"),
     
     # runners
-    # path('runners/', runners, name='runners'),
+    path('runners/', runners, name='runners'),
     path('runners/<slug:slug>/', runner, name='runner'),
     
     # teams
