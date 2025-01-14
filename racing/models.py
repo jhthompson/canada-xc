@@ -64,7 +64,7 @@ class Meet(models.Model):
     conferences = models.ManyToManyField(Conference)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} ({self.date.year})"
     
     def get_absolute_url(self):
         return reverse("meet", kwargs={"year": self.date.year, "slug": self.slug})
