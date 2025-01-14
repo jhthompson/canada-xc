@@ -9,9 +9,10 @@ fi
 
 # Extract the final number from the URL
 event_id=$(echo "$1" | sed 's:.*/::')
+echo "Fetching data for event ID: $event_id"
 
 # Define the URL to fetch the JSON data
-json_url="https://athleticlive.blob.core.windows.net/\$web/ind_res_list/_doc/$event_id"
+json_url="https://athleticlive.blob.core.windows.net/\$web/ind_res_list/_doc/1031951"
 
 json_data=$(curl "$json_url")
 
