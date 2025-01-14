@@ -58,8 +58,13 @@ class Meet(models.Model):
     For instance, the 2024 AUS Championship.
     """
 
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['slug', 'year'], name='unique__meet__slug_year')
+        ]
+
     name = models.CharField(max_length=50)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField()
     date = models.DateField()
     conferences = models.ManyToManyField(Conference)
 
