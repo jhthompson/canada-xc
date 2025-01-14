@@ -99,7 +99,7 @@ class Race(models.Model):
     type = models.CharField(choices = TYPE_CHOICES, max_length=50, default="OPEN")
 
     def __str__(self):
-        return f"{self.meet.name} {self.distance}{self.unit} ({self.sex})"
+        return f"{self.meet.name} {self.distance}{self.unit} ({self.sex}, {self.meet.date.year})"
     
     def get_absolute_url(self):
         return reverse("race", kwargs={"year": self.meet.date.year, "slug": self.meet.slug, "race_info": (int(self.distance), self.unit, self.sex)})
