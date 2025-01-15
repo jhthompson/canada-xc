@@ -24,13 +24,16 @@ from racing.models import (
 class ConferenceAdmin(admin.ModelAdmin):
     list_display = ("short_name", "full_name", "logo")
 
+
 class RosterSpotInline(AdminImageMixin, admin.TabularInline):
     model = RosterSpot
     extra = 1
-    
+
+
 class ResultInline(admin.TabularInline):
     model = Result
     extra = 0
+
 
 @admin.register(Runner)
 class RunnerAdmin(admin.ModelAdmin):
@@ -39,13 +42,16 @@ class RunnerAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
     search_fields = ["name"]
 
+
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
     list_display = ("short_name", "full_name", "division")
 
+
 class RaceInline(admin.TabularInline):
     model = Race
     extra = 1
+
 
 @admin.register(Meet)
 class MeetAdmin(admin.ModelAdmin):
@@ -53,17 +59,20 @@ class MeetAdmin(admin.ModelAdmin):
     list_display = ("name", "date")
     prepopulated_fields = {"slug": ("name",)}
 
+
 class OfficialResultInline(admin.TabularInline):
     model = OfficialResult
     extra = 1
+
 
 class ResultInline(admin.TabularInline):
     model = Result
     extra = 1
 
+
 @admin.register(Race)
 class RaceAdmin(admin.ModelAdmin):
-    inlines=[OfficialResultInline, ResultInline]
+    inlines = [OfficialResultInline, ResultInline]
     search_fields = ["meet__name"]
 
 
@@ -89,7 +98,7 @@ class ResultConfirmImportForm(ConfirmImportForm):
 
 class ResultResource(resources.ModelResource):
     team = fields.Field(
-        column_name="team", 
+        column_name="team",
         attribute="team",
         widget=ForeignKeyWidget(Team, "full_name"),
     )

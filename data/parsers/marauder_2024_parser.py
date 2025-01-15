@@ -8,36 +8,39 @@ def format_team_name(team):
         return ""
     return team.title()
 
+
 def parse_results(json_file):
     # Read JSON file
     with open(json_file) as f:
         data = json.load(f)
-    
+
     # List to store formatted results
     results = []
-    
+
     # Extract results from the 'r' array
-    for runner in data.get('_source').get('r', []):
+    for runner in data.get("_source").get("r", []):
         result = {
-            'name': f"{runner.get('a').get('n')}".strip(),
-            'time': runner.get('m', ''),
-            'team': format_team_name(runner.get('a').get('t').get('n'))
+            "name": f"{runner.get('a').get('n')}".strip(),
+            "time": runner.get("m", ""),
+            "team": format_team_name(runner.get("a").get("t").get("n")),
         }
         results.append(result)
-    
+
     return results
+
 
 def write_csv(results, output_file):
     # Write results to CSV
-    with open(output_file, 'w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=['name', 'time', 'team'])
+    with open(output_file, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["name", "time", "team"])
         writer.writeheader()
         writer.writerows(results)
 
+
 def main():
-    input_file = 'marauder_invitational_men_2024.json'
-    output_file = 'marauder_invitational_men_2024.csv'
-    
+    input_file = "marauder_invitational_men_2024.json"
+    output_file = "marauder_invitational_men_2024.csv"
+
     try:
         results = parse_results(input_file)
         write_csv(results, output_file)
@@ -45,5 +48,6 @@ def main():
     except Exception as e:
         print(f"Error processing results: {e}")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
