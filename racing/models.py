@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from sorl.thumbnail import ImageField
 
 from django.db import models
+from django.db.models.functions import ExtractYear
 from django.template.defaultfilters import floatformat
 from django.urls import reverse
 
@@ -60,8 +61,17 @@ class Meet(models.Model):
     For instance, the 2024 AUS Championship.
     """
 
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                ExtractYear("date"),
+                "slug",
+                name="unique_slug_year",
+            )
+        ]
+
     name = models.CharField(max_length=50)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField()
     date = models.DateField()
     conferences = models.ManyToManyField(Conference)
 
