@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from sorl.thumbnail import ImageField
 
 from django.db import models
+from django.db.models import Max
 from django.db.models.functions import ExtractYear
 from django.template.defaultfilters import floatformat
 from django.urls import reverse
@@ -267,8 +268,8 @@ class Runner(models.Model):
     def get_teams(self):
         return (
             Team.objects.filter(rosterspot__runner=self)
-            .order_by("-rosterspot__year")
-            .distinct()
+            .annotate(latest_year=Max('rosterspot__year'))\
+             .order_by('-latest_year')
         )
 
     def get_headshot(self):

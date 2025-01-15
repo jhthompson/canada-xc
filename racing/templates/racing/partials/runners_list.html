@@ -6,7 +6,7 @@
             <p class="mb-0">{{ runner.name }}</p>
             <span class="text-muted">
                 {% for team in runner.get_teams %}
-                    {{ team.short_name }}
+                    {{ team.short_name }}{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             </span>
         </div>
