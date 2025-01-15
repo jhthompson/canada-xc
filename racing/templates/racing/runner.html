@@ -38,7 +38,7 @@
             {% elif result.position == 3 %}
                 <img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">
             {% endif %}
-            {{ result.position|ordinal }} - {{ result.result.race.meet }} {{ result.result.race.meet.date.year }} ({{ result.result.race.get_display_distance }}, {{ result.result.time|finish_time }})
+            {{ result.position|ordinal }} - {{ result.result.race.meet.name }} {{ result.result.race.meet.date.year }} ({{ result.result.race.get_display_distance }}, {{ result.result.time|finish_time }})
         </a>     
     {% endfor %}
 </div>
