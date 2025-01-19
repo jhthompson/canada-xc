@@ -22,7 +22,7 @@ class YearConverter:
 
 
 class RaceConverter:
-    regex = r"(\d)+(km|mi)-(male|female)"
+    regex = r"(\d+)(km|mi)-(male|female)"
 
     def to_python(self, value):
         # returns tuple of (distance, unit, sex)
