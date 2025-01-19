@@ -100,6 +100,10 @@ class Race(models.Model):
 
     UNIT_CHOICES = [("km", "km"), ("mi", "miles")]
     TYPE_CHOICES = [("OPEN", "Open"), ("USPORTS", "U Sports")]
+    TIEBREAK_CHOICES = [
+        ("LAST_SCORER", "Last Scorer"),
+        ("FIRST_DISPLACER", "First Displacer"),
+    ]
 
     meet = models.ForeignKey(Meet, on_delete=models.CASCADE)
     distance = models.DecimalField(max_digits=5, decimal_places=2)
@@ -109,6 +113,10 @@ class Race(models.Model):
 
     scorers = models.IntegerField(default=5)
     displacers = models.IntegerField(default=2)
+
+    tiebreaker = models.CharField(
+        choices=TIEBREAK_CHOICES, max_length=50, default="FIRST_DISPLACER"
+    )
 
     type = models.CharField(choices=TYPE_CHOICES, max_length=50, default="OPEN")
 
@@ -176,21 +184,20 @@ class Race(models.Model):
                         team_scores[team].scoring_members.append(
                             (result, result.points)
                         )
+                        if (
+                            self.tiebreaker == "LAST_SCORER"
+                            and len(team_results[team]) == scoring_finisher_count - 1
+                        ):
+                            # Last scoring runner
+                            team_scores[team].tiebreaker_points = result.points
                     elif len(team_results[team]) < maximum_team_size:
                         team_scores[team].displacers.append((result, result.points))
-                        if len(team_results[team]) == scoring_finisher_count:
+                        if (
+                            self.tiebreaker == "FIRST_DISPLACER"
+                            and len(team_results[team]) == scoring_finisher_count
+                        ):
                             # First non-scoring runner
-                            team_scores[team].tiebreaker_points = (
-                                len(
-                                    list(
-                                        filter(
-                                            lambda x: x.points is not None,
-                                            results[: results.index(result)],
-                                        )
-                                    )
-                                )
-                                + 1
-                            )
+                            team_scores[team].tiebreaker_points = result.points
                 team_results[team].append(result)
 
             return sorted(
@@ -221,10 +228,19 @@ class Race(models.Model):
                     # This finisher scores points
                     team_scores[team].score += points
                     team_scores[team].scoring_members.append((result, points))
+                    if (
+                        self.tiebreaker == "LAST_SCORER"
+                        and len(team_results[team]) == scoring_finisher_count - 1
+                    ):
+                        # Last scoring runner
+                        team_scores[team].tiebreaker_points = points
                 elif len(team_results[team]) < maximum_team_size:
                     # This finisher is a displacer
                     team_scores[team].displacers.append((result, points))
-                    if len(team_results[team]) == scoring_finisher_count:
+                    if (
+                        self.tiebreaker == "FIRST_DISPLACER"
+                        and len(team_results[team]) == scoring_finisher_count
+                    ):
                         # First non-scoring runner
                         team_scores[team].tiebreaker_points = points
 
@@ -268,8 +284,8 @@ class Runner(models.Model):
     def get_teams(self):
         return (
             Team.objects.filter(rosterspot__runner=self)
-            .annotate(latest_year=Max('rosterspot__year'))\
-             .order_by('-latest_year')
+            .annotate(latest_year=Max("rosterspot__year"))
+            .order_by("-latest_year")
         )
 
     def get_headshot(self):
