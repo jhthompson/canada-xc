@@ -16,7 +16,7 @@ echo "name,time,team"
 # Fetch JSON from URL and parse using jq
 echo "$json_data" | jq -r '.resultSet.results[] | [
   .[2],           # name (index 2)
-  .[20],          # finish time (index 20)
+  .[24],          # chip time (index 24)
   .[3]            # team (index 3)
 ] | join(",")'
 

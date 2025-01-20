@@ -25,6 +25,7 @@ team_names_male_synonyms=(
     "UQTR Patriotes"
     "UQAM Citadins"
     "Laurier Golden Hawks"
+    "McGill Martlets/Redmen"
     # Add more synonyms here
 )
 
@@ -38,6 +39,7 @@ team_names_male_canonicals=(
     "Université du Québec à Trois-Rivières Les Patriote"
     "Université du Québec à Montréal Les Citadins"
     "Wilfrid Laurier Golden Hawks"
+    "McGill Redbirds"
     # Add more canonical forms here
 )
 
@@ -51,6 +53,8 @@ team_names_female_synonyms=(
     "UQTR Patriotes"
     "UQAM Citadins"
     "Laurier Golden Hawks"
+    "McGill Martlets/Redmen"
+    "Acadia Axemen/Axewomen"
     # Add more synonyms here
 )
 
@@ -64,6 +68,8 @@ team_names_female_canonicals=(
     "Université du Québec à Trois-Rivières Les Patriote"
     "Université du Québec à Montréal Les Citadins"
     "Wilfrid Laurier Golden Hawks"
+    "McGill Martlets"
+    "Acadia"
     # Add more canonical forms here
 )
 
