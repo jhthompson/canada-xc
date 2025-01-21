@@ -1,0 +1,87 @@
+import argparse
+import sys
+
+common_team_names = {
+    # synonym: canonical
+    "Laval Rouge-et-Or": "Laval Rouge et Or",
+    "Universite Laval": "Laval Rouge et Or",
+    "Sherbrooke Vert-et-Or": "Sherbrooke Vert & Or",
+    "Sherbrooke": "Sherbrooke Vert & Or",
+    "UBC Okanagan": "UBCO Heat",
+    "UQTR Patriotes": "Université du Québec à Trois-Rivières Les Patriote",
+    "UQTR": "Université du Québec à Trois-Rivières Les Patriote",
+    "UQAM Citadins": "Université du Québec à Montréal Les Citadins",
+    "UQAM": "Université du Québec à Montréal Les Citadins",
+    "Laurier Golden Hawks": "Wilfrid Laurier Golden Hawks",
+    "Wilfrid Laurier University": "Wilfrid Laurier Golden Hawks",
+    "McGill University": "McGill Redbirds",
+    "University of Guelph": "Guelph Gryphons",
+    "Western University": "Western Mustangs",
+    "University of Calgary": "Calgary Dinos",
+    "Queen's University": "Queen's Gaels",
+    "McMaster University": "McMaster Marauders",
+    "University of Windsor": "Windsor Lancers",
+    "Trinity Western University": "Trinity Western Spartans",
+    "University of Victoria": "Victoria Vikes",
+    "University of Regina": "Regina Cougars",
+    "Dalhousie University": "Dalhousie Tigers",
+    "University of Toronto": "Toronto Varsity Blues",
+    "University of PEI": "UPEI Panthers",
+    "Brock University": "Brock Badgers",
+    "Saint Mary's University": "St. Mary's Huskies",
+    "Universite de Montreal": "Montréal Carabins",
+    "University of Manitoba": "Manitoba Bisons",
+    "University of Ottawa": "Ottawa Gee-Gees",
+    "University of Waterloo": "Waterloo Warriors",
+    "MacEwan University": "MacEwan Griffins",
+    "Thompson Rivers University": "Thompson Rivers Wolfpack",
+    "Universite de Moncton": "Moncton Aigles Bleu",
+}
+
+male_team_names = {
+    # synonym: canonical
+    "Alberta Golden Bears/Pandas": "Alberta Golden Bears",
+    "University of Alberta": "Alberta Golden Bears",
+    "McGill Martlets/Redmen": "McGill Redbirds",
+    "McGill University": "McGill Redbirds",
+}
+
+female_team_names = {
+    # synonym: canonical
+    "Alberta Golden Bears/Pandas": "Alberta Pandas",
+    "University of Alberta": "Alberta Pandas",
+    "McGill Martlets/Redmen": "McGill Martlets",
+    "McGill University": "McGill Martlets",
+}
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Standardize team names.")
+    parser.add_argument(
+        "-g",
+        "--gender",
+        required=True,
+        choices=["male", "female"],
+        help="Specify the gender (male/female)",
+    )
+    args = parser.parse_args()
+
+    team_gender = args.gender
+
+    if team_gender == "male":
+        team_names = common_team_names | male_team_names
+    elif team_gender == "female":
+        team_names = common_team_names | female_team_names
+    else:
+        print("Invalid input. Please enter 'male' or 'female'.")
+        sys.exit(1)
+
+    # Read from stdin and write to stdout
+    for line in sys.stdin:
+        for synonym, canonical in team_names.items():
+            line = line.replace(synonym, canonical)
+        print(line, end="")
+
+
+if __name__ == "__main__":
+    main()
