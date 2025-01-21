@@ -16,12 +16,12 @@ common_team_names = {
     "Wilfrid Laurier University": "Wilfrid Laurier Golden Hawks",
     "McGill University": "McGill Redbirds",
     "University of Guelph": "Guelph Gryphons",
+    "Trinity Western University": "Trinity Western Spartans",
     "Western University": "Western Mustangs",
     "University of Calgary": "Calgary Dinos",
     "Queen's University": "Queen's Gaels",
     "McMaster University": "McMaster Marauders",
     "University of Windsor": "Windsor Lancers",
-    "Trinity Western University": "Trinity Western Spartans",
     "University of Victoria": "Victoria Vikes",
     "University of Regina": "Regina Cougars",
     "Dalhousie University": "Dalhousie Tigers",
@@ -36,6 +36,12 @@ common_team_names = {
     "MacEwan University": "MacEwan Griffins",
     "Thompson Rivers University": "Thompson Rivers Wolfpack",
     "Universite de Moncton": "Moncton Aigles Bleu",
+    "University of Saskatchewan": "Saskatchewan Huskies",
+    "Carleton University": "Carleton Ravens",
+    "Lakehead University": "Lakehead Thunderwolves",
+    "Laurentian University": "Laurentian Voyageurs",
+    "St. Francis Xavier": "St. F X",
+    "Acadia University": "Acadia",
 }
 
 male_team_names = {
