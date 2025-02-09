@@ -29,8 +29,10 @@ common_team_names = {
     "University of Regina": "Regina Cougars",
     "Dalhousie University": "Dalhousie Tigers",
     "University of Toronto": "Toronto Varsity Blues",
+    "University of Prince Edward Island": "UPEI Panthers",
     "University of PEI": "UPEI Panthers",
     "Brock University": "Brock Badgers",
+    "Saint Marys University": "St. Mary's Huskies",
     "St Mary's": "St. Mary's Huskies",
     "Saint Mary's University": "St. Mary's Huskies",
     "Universite de Montreal": "Montréal Carabins",
@@ -47,11 +49,15 @@ common_team_names = {
     "Carleton": "Carleton Ravens",
     "Lakehead University": "Lakehead Thunderwolves",
     "Laurentian University": "Laurentian Voyageurs",
-    "St. Francis Xavier": "St. F X",
     "St Francis Xavier University": "St. F X",
+    "St. Francis Xavier University": "St. F X",
+    "St. Francis Xavier": "St. F X",
     "Acadia University": "Acadia",
     "Ryerson University": "Ryerson Rams",
     "Concordia University": "Concordia Stingers",
+    "University of New Brunswick": "UNB Reds",
+    "Memorial University of Newfoundland": "Memorial Sea-Hawks",
+    "St. Thomas University": "St. Thomas Tommies",
 }
 
 male_team_names = {
