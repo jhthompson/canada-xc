@@ -31,6 +31,7 @@ common_team_names = {
     "University of Toronto": "Toronto Varsity Blues",
     "University of Prince Edward Island": "UPEI Panthers",
     "University of PEI": "UPEI Panthers",
+    "University of P E I": "UPEI Panthers",
     "Brock University": "Brock Badgers",
     "Saint Marys University": "St. Mary's Huskies",
     "St Mary's": "St. Mary's Huskies",
@@ -56,14 +57,20 @@ common_team_names = {
     "St. Francis Xavier": "St. F X",
     "St. Francis": "St. F X",
     "StFX": "St. F X",
+    "St F X": "St. F X",
     "Acadia University": "Acadia",
     "Ryerson University": "Ryerson Rams",
     "Concordia University": "Concordia Stingers",
     "University of New Brunswick": "UNB Reds",
     "UNB": "UNB Reds",
+    "U N B": "UNB Reds",
     "Memorial University of Newfoundland": "Memorial Sea-Hawks",
     "St. Thomas University": "St. Thomas Tommies",
     "St. Thomas": "St. Thomas Tommies",
+    "St Thomas": "St. Thomas Tommies",
+    "A S E A": "ASEA Athlétisme Sud-Est / South-East Athletics",
+    "unattached": "Unattached",
+    "Y H Z Athletics": "YHZ Athletics",
 }
 
 male_team_names = {
