@@ -40,11 +40,17 @@ def race(request, year: int, slug: str, race_info: tuple[int, str, str]):
 
     # For each result, attach the roster spot (for headshot)
     results = []
-    for result in race.top_results():
-        roster_spot = RosterSpot.objects.filter(
-            runner=result.runner, team=result.team, year=race.meet.date.year
-        ).first()
-        result.roster_spot = roster_spot
+    top_results = race.top_results().select_related("runner", "team")
+    roster_spots = RosterSpot.objects.filter(
+        runner__in=[result.runner for result in top_results],
+        team__in=[result.team for result in top_results],
+        year=race.meet.date.year,
+    )
+
+    roster_spot_dict = {(spot.runner_id, spot.team_id): spot for spot in roster_spots}
+
+    for result in top_results:
+        result.roster_spot = roster_spot_dict.get((result.runner_id, result.team_id))
         results.append(result)
 
     return render(request, "racing/race.html", {"race": race, "results": results})

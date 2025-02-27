@@ -170,7 +170,7 @@ class Race(models.Model):
         team_results = defaultdict(list)
         team_scores = {}
 
-        results = list(self.top_results())
+        results = list(self.top_results().select_related("team"))
 
         # Handle manual points case
         if any(result.points is not None for result in results):
