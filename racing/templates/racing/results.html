@@ -4,18 +4,33 @@
 
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h1 class="mb-0">Recent Results</h1>
-    <select class="form-select w-auto" 
-            hx-get="{% url 'results' %}"
-            hx-push-url="true"
-            hx-target="#results-list"
-            name="conference">
-        <option value="">All Conferences</option>
-        {% for conf in conferences %}
-            <option value="{{ conf.short_name }}" {% if selected_conference == conf.short_name %}selected{% endif %}>
-                {{ conf.short_name }}
-            </option>
-        {% endfor %}
-    </select>
+    <form class="row g-2" 
+        hx-get="{% url 'results' %}"
+        hx-trigger="change"
+        hx-push-url="true"
+        hx-target="#results-list"
+    >
+        <div class="col">
+            <select class="form-select w-auto" name="conference">
+                <option value="">All Conferences</option>
+                {% for conf in conferences %}
+                    <option value="{{ conf.short_name }}" {% if selected_conference == conf.short_name %}selected{% endif %}>
+                        {{ conf.short_name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col">
+            <select class="form-select w-auto" name="year">
+                <option value="">Any Year</option>
+                {% for year in years %}
+                    <option value="{{ year }}" {% if selected_year == year %}selected{% endif %}>
+                        {{ year }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+    </form>
 </div>
 
 <div id="results-list" class="list-group mb-3">

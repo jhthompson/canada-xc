@@ -164,11 +164,26 @@ def get_head_to_head_context(slug_a: str, slug_b: str):
     }
 
 
+def get_meet_years():
+    """
+    Returns a list of years when meets may have happened.
+    Starts from the current year and goes back to the oldest meet's year.
+    """
+    oldest_meet = Meet.objects.order_by("date").first()
+    current_year = timezone.now().year
+    if oldest_meet:
+        return list(range(oldest_meet.date.year, current_year + 1))[::-1]
+    return []
+
+
 def results(request):
     meets = Meet.objects.filter(date__lte=timezone.now()).order_by("-date")
 
     if conference_short_name := request.GET.get("conference"):
         meets = meets.filter(conferences__short_name=conference_short_name)
+
+    if year := request.GET.get("year"):
+        meets = meets.filter(date__year=year)
 
     if request.htmx:
         template = "racing/partials/results_list.html"
@@ -181,7 +196,9 @@ def results(request):
         {
             "meets": meets,
             "conferences": Conference.objects.all(),
+            "years": [str(y) for y in get_meet_years()],
             "selected_conference": conference_short_name,
+            "selected_year": year,
         },
     )
 
