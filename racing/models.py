@@ -294,6 +294,12 @@ class Runner(models.Model):
             self.rosterspot_set.filter(headshot__isnull=False).order_by("-year").first()
         )
         return roster_spot.headshot if roster_spot else None
+    
+    def get_roster_spots(self):
+        """
+        Returns all roster spots for this runner, ordered by year descending.
+        """
+        return self.rosterspot_set.order_by("-year")
 
 
 class RosterSpot(models.Model):
