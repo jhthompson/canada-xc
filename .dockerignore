@@ -1,0 +1,7 @@
+.media
+.static
+.venv
+.env
+cache
+*.dump
+*.sqlite3

@@ -44,12 +44,10 @@ dependencies = [
     { name = "django" },
     { name = "django-htmx" },
     { name = "django-import-export" },
-    { name = "gunicorn" },
     { name = "pillow" },
     { name = "psycopg", extra = ["c"] },
     { name = "python-dotenv" },
     { name = "redis" },
-    { name = "sentry-sdk", extra = ["django"] },
     { name = "sorl-thumbnail" },
     { name = "thefuzz" },
 ]
@@ -62,18 +60,20 @@ dev = [
     { name = "requests" },
     { name = "ruff" },
 ]
+prod = [
+    { name = "gunicorn" },
+    { name = "sentry-sdk", extra = ["django"] },
+]
 
 [package.metadata]
 requires-dist = [
     { name = "django", specifier = ">=5.1.2" },
     { name = "django-htmx", specifier = ">=1.21.0" },
     { name = "django-import-export", specifier = ">=4.1.1" },
-    { name = "gunicorn", specifier = ">=23.0.0" },
     { name = "pillow", specifier = ">=11.0.0" },
     { name = "psycopg", extras = ["c"], specifier = ">=3.2.3" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "redis", specifier = ">=5.2.0" },
-    { name = "sentry-sdk", extras = ["django"], specifier = ">=2.18.0" },
     { name = "sorl-thumbnail", specifier = ">=12.11.0" },
     { name = "thefuzz", specifier = ">=0.22.1" },
 ]
@@ -85,6 +85,10 @@ dev = [
     { name = "django-debug-toolbar", specifier = ">=4.4.6" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "ruff", specifier = ">=0.6.9" },
+]
+prod = [
+    { name = "gunicorn", specifier = ">=23.0.0" },
+    { name = "sentry-sdk", extras = ["django"], specifier = ">=2.18.0" },
 ]
 
 [[package]]
