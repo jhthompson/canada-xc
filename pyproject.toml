@@ -14,6 +14,7 @@ dependencies = [
     "redis>=5.2.0",
     "sorl-thumbnail>=12.11.0",
     "thefuzz>=0.22.1",
+    "dj-database-url>=3.0.1",
 ]
 
 [dependency-groups]
