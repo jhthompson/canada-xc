@@ -34,17 +34,17 @@ def add_aus_teams(apps, schema_editor):
     Team = apps.get_model('racing', 'Team')
         
     teams = [
-        ('Dalhousie Tigers', 'DAL'),
-        ('UNB Reds', 'UNB'),
-        ('St. F X', 'StFX'),
-        ('UPEI Panthers', 'UPEI'),
-        ('Moncton Aigles Bleu', 'UdeM'),
-        ("St. Mary's Huskies", 'SMU'),
-        ('Acadia', 'Acadia'),
+        ('Dalhousie Tigers', 'DAL', 'dalhousie'),
+        ('UNB Reds', 'UNB', 'unb'),
+        ('St. F X', 'StFX', 'stfx'),
+        ('UPEI Panthers', 'UPEI', 'upei'),
+        ('Moncton Aigles Bleu', 'UdeM', 'moncton'),
+        ("St. Mary's Huskies", 'SMU', 'st-marys'),
+        ('Acadia', 'Acadia', 'acadia'),
     ]
     
-    for full_name, short_name in teams:
-        Team.objects.create(full_name=full_name, short_name=short_name)
+    for full_name, short_name, slug in teams:
+        Team.objects.create(full_name=full_name, short_name=short_name, slug=slug)
 
 
 class Migration(migrations.Migration):
