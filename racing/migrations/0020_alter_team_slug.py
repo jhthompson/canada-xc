@@ -2,6 +2,20 @@
 
 from django.db import migrations, models
 
+def add_slug_to_aus_teams(apps, schema_editor):
+    Team = apps.get_model('racing', 'Team')
+
+    slug_map = {
+        'Dalhousie Tigers': 'dalhousie',
+        'UNB Reds': 'unb',
+        'St. F X': 'stfx',
+        'UPEI Panthers': 'upei',
+        'Moncton Aigles Bleu': 'moncton',
+        "St. Mary's Huskies": 'st-marys',
+        'Acadia': 'acadia',
+    }
+    for full_name, slug in slug_map.items():
+        Team.objects.filter(full_name=full_name).update(slug=slug)
 
 class Migration(migrations.Migration):
 
@@ -10,6 +24,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunPython(add_slug_to_aus_teams),
         migrations.AlterField(
             model_name='team',
             name='slug',
