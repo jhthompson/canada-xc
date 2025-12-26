@@ -9,18 +9,22 @@ common_team_names = {
     "Universit� de Sherbrooke": "Sherbrooke Vert & Or",
     "Sherbrooke Vert-et-Or": "Sherbrooke Vert & Or",
     "UBC Okanagan": "UBCO Heat",
+    "Ubc Okanagan": "UBCO Heat",
     "UQTR Patriotes": "Université du Québec à Trois-Rivières Les Patriote",
     "UQTR": "Université du Québec à Trois-Rivières Les Patriote",
     "UQAM Citadins": "Université du Québec à Montréal Les Citadins",
     "UQAM": "Université du Québec à Montréal Les Citadins",
+    "UQAC": "UQAC Inuk",
     "Universite Quebec A Montreal": "Université du Québec à Montréal Les Citadins",
     "Laurier Golden Hawks": "Wilfrid Laurier Golden Hawks",
     "Wilfrid Laurier University": "Wilfrid Laurier Golden Hawks",
     "McGill University": "McGill Redbirds",
     "University of Guelph": "Guelph Gryphons",
     "Trinity Western University": "Trinity Western Spartans",
+    "Western": "Western Mustangs",
     "Western University": "Western Mustangs",
     "University of Calgary": "Calgary Dinos",
+    "Queens Gaels": "Queen's Gaels",
     "Queen's University": "Queen's Gaels",
     "Queens University": "Queen's Gaels",
     "McMaster University": "McMaster Marauders",
@@ -38,6 +42,8 @@ common_team_names = {
     "Saint Marys": "St. Mary's Huskies",
     "Saint Mary's": "St. Mary's Huskies",
     "Saint Mary's University": "St. Mary's Huskies",
+    "St. Mary's Huskies Univeristy": "St. Mary's Huskies",
+    "Montreal Carabins": "Montréal Carabins",
     "Universite de Montreal": "Montréal Carabins",
     "Universite De Montreal": "Montréal Carabins",
     "University of Manitoba": "Manitoba Bisons",
@@ -62,7 +68,6 @@ common_team_names = {
     "Ryerson University": "Ryerson Rams",
     "Concordia University": "Concordia Stingers",
     "University of New Brunswick": "UNB Reds",
-    "UNB": "UNB Reds",
     "U N B": "UNB Reds",
     "Memorial University of Newfoundland": "Memorial Sea-Hawks",
     "St. Thomas University": "St. Thomas Tommies",
@@ -71,6 +76,9 @@ common_team_names = {
     "A S E A": "ASEA Athlétisme Sud-Est / South-East Athletics",
     "unattached": "Unattached",
     "Y H Z Athletics": "YHZ Athletics",
+    "St Francis Xavier X-Men/X-Women": "St. F X",
+    "Toronto Metro Bold": "TMU Bold",
+    "Ecole de technologie superieure": "École de technologie supérieure",
 }
 
 male_team_names = {
@@ -79,6 +87,7 @@ male_team_names = {
     "University of Alberta": "Alberta Golden Bears",
     "McGill Martlets/Redmen": "McGill Redbirds",
     "McGill University": "McGill Redbirds",
+    "McGill": "McGill Redbirds",
 }
 
 female_team_names = {
@@ -87,6 +96,7 @@ female_team_names = {
     "University of Alberta": "Alberta Pandas",
     "McGill Martlets/Redmen": "McGill Martlets",
     "McGill University": "McGill Martlets",
+    "McGill": "McGill Martlets",
 }
 
 
