@@ -24,6 +24,9 @@ def index(request, conference_short_name=None):
             "upcoming_meets": upcoming_meets,
         },
     )
+    
+def about(request):
+    return render(request, "racing/about.html")
 
 
 def meet(request, year: int, slug: str):
