@@ -25,7 +25,7 @@ prod = [
 dev = [
     "bs4==0.0.2",
     "djade==1.9.0",
-    "django-debug-toolbar==7.1.1",
+    "django-debug-toolbar==8.0.0",
     "requests==2.34.2",
     "ruff==0.16.5",
 ]
