@@ -1,7 +1,12 @@
+**/.git
+**/.github
 .media
+.ruff_cache
 .static
 .venv
 .env
-cache
+**/cache
+**/data
 *.dump
 *.sqlite3
+update_dev_database.sh
