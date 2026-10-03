@@ -42,6 +42,22 @@ SECRET_KEY = os.getenv("DJANGO_SECURITY_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DJANGO_DEBUG") == "True"
 
+# Send Django errors to container logs even when DEBUG is off.
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {"class": "logging.StreamHandler"},
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["console"],
+            "level": "INFO",
+            "propagate": False,
+        },
+    },
+}
+
 ALLOWED_HOSTS = [
     "canadaxc.ca",
     "canada-xc.jhthompson.ca"
