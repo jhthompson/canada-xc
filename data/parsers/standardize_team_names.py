@@ -58,12 +58,14 @@ common_team_names = {
     "Carleton": "Carleton Ravens",
     "Lakehead University": "Lakehead Thunderwolves",
     "Laurentian University": "Laurentian Voyageurs",
+    "St. Francis Xavier X-Men/X-Wom": "St. F X",
     "St Francis Xavier University": "St. F X",
     "St. Francis Xavier University": "St. F X",
     "St. Francis Xavier": "St. F X",
     "St. Francis": "St. F X",
     "StFX": "St. F X",
     "St F X": "St. F X",
+    "Acadia Axemen/Axewomen": "Acadia",
     "Acadia University": "Acadia",
     "Ryerson University": "Ryerson Rams",
     "Concordia University": "Concordia Stingers",
@@ -79,6 +81,7 @@ common_team_names = {
     "St Francis Xavier X-Men/X-Women": "St. F X",
     "Toronto Metro Bold": "TMU Bold",
     "Ecole de technologie superieure": "École de technologie supérieure",
+    "Cape Breton University": "Cape Breton Capers",
 }
 
 male_team_names = {

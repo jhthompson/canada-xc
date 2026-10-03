@@ -3,17 +3,11 @@
 # Check if a URL is provided as a parameter
 if [ -z "$1" ]; then
   echo "Usage: $0 <input_url>"
-  echo "Please provide the Athletic Live URL (e.g. https://live.athletic.net/meets/39707/events/xc/1502595)."
+  echo "Please provide the Athletic Live JSON URL (e.g. https://athleticlive.blob.core.windows.net/\$web/ind_res_list/_doc/2926359)."
   exit 1
 fi
 
-# Extract the final number from the URL
-event_id=$(echo "$1" | sed 's:.*/::')
-echo "Fetching data for event ID: $event_id"
-
-# Define the URL to fetch the JSON data
-json_url="https://athleticlive.blob.core.windows.net/\$web/ind_res_list/_doc/1031951"
-
+json_url="$1"
 json_data=$(curl "$json_url")
 
 # Print the headers
