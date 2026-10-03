@@ -65,4 +65,4 @@ USER nonroot
 WORKDIR /app
 
 # Run the application by default
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "canadaxc.wsgi:application"]
+CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py collectstatic --noinput && exec gunicorn --bind 0.0.0.0:8000 --workers 3 canadaxc.wsgi:application"]
