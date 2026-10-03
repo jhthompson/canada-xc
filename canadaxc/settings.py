@@ -43,7 +43,8 @@ SECRET_KEY = os.getenv("DJANGO_SECURITY_KEY")
 DEBUG = os.getenv("DJANGO_DEBUG") == "True"
 
 ALLOWED_HOSTS = [
-    "canadaxc.ca"
+    "canadaxc.ca",
+    "canada-xc.jhthompson.ca"
 ]
 
 if DEBUG:
