@@ -99,6 +99,7 @@ if DEBUG:
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -193,6 +194,12 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.getenv("DJANGO_STATIC_ROOT")
+
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 # Media files (user uploaded files)
 # https://docs.djangoproject.com/en/5.1/topics/files/
