@@ -126,6 +126,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "canadaxc.wsgi.application"
 
+# Trust proxy headers set by Traefik
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
