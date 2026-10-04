@@ -196,6 +196,21 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.getenv("DJANGO_STATIC_ROOT")
 
 STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+        "OPTIONS": {
+            "bucket_name": os.environ["R2_BUCKET_NAME"],
+            "endpoint_url": os.environ["R2_ENDPOINT_URL"],
+            "access_key": os.environ["R2_ACCESS_KEY_ID"],
+            "secret_key": os.environ["R2_SECRET_ACCESS_KEY"],
+            "region_name": "auto",
+            "signature_version": "s3v4",
+            "custom_domain": os.environ["R2_CUSTOM_DOMAIN"],
+            "querystring_auth": False,
+            "default_acl": None,
+            "file_overwrite": False,
+        },
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
