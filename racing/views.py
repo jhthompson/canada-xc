@@ -1,7 +1,12 @@
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
 
 from racing.models import Conference, Meet, Race, RosterSpot, Runner, Team
+
+
+def health_check(request):
+    return HttpResponse("OK", status=200)
 
 
 def index(request, conference_short_name=None):

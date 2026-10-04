@@ -22,9 +22,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
+from racing.views import health_check
+
 urlpatterns = [
     path("", include("racing.urls")),
     path("admin/", admin.site.urls),
+    path('health/', health_check, name='health_check'),
 ]
 
 if settings.DEBUG:
