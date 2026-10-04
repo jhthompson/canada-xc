@@ -60,11 +60,9 @@ LOGGING = {
 
 ALLOWED_HOSTS = [
     "canadaxc.ca",
-    "canada-xc.jhthompson.ca"
+    "canada-xc.jhthompson.ca",
+    "localhost",
 ]
-
-if DEBUG:
-    ALLOWED_HOSTS.append("127.0.0.1")
     
 INTERNAL_IPS = []
 
@@ -73,10 +71,6 @@ if DEBUG:
 
 # Admins
 ADMINS = [("Administrator", "admin@canadaxc.ca")]
-
-if DEBUG:
-    ALLOWED_HOSTS.append("localhost")
-
 
 # Application definition
 
