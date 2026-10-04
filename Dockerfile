@@ -39,8 +39,9 @@ FROM python:3.12-slim-trixie
 # will fail.
 
 # psycopg-c links against PostgreSQL's client library.
+# curl needed for health check
 RUN apt-get update \
- && apt-get install -y --no-install-recommends libpq5 \
+ && apt-get install -y --no-install-recommends libpq5 curl \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
