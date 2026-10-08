@@ -7,7 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "django-htmx==1.29.0",
     "django-import-export==4.4.1",
-    "django==6.1",
+    "django==6.1.1",
     "pillow==12.3.0",
     "psycopg[c]==3.3.4",
     "python-dotenv==1.2.3",
