@@ -1,7 +1,7 @@
 # First, build the application in the `/app` directory.
 FROM ghcr.io/astral-sh/uv:python3.12-trixie-slim AS builder
 
-# Install system dependencies required for building/running psycopg2
+# Install system dependencies required for building/running psycopg[c]
 RUN apt-get update \
  && apt-get install -y --no-install-recommends build-essential libpq-dev \
  && apt-get clean \
