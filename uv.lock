@@ -138,7 +138,7 @@ requires-dist = [
     { name = "django", specifier = "==6.1" },
     { name = "django-htmx", specifier = "==1.29.0" },
     { name = "django-import-export", specifier = "==4.4.1" },
-    { name = "django-storages", extras = ["s3"], specifier = ">=1.14.6" },
+    { name = "django-storages", extras = ["s3"], specifier = "==1.14.6" },
     { name = "gunicorn", specifier = "==26.2.0" },
     { name = "pillow", specifier = "==12.3.0" },
     { name = "psycopg", extras = ["c"], specifier = "==3.3.4" },

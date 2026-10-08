@@ -18,7 +18,7 @@ dependencies = [
     "gunicorn==26.2.0",
     "sentry-sdk[django]==2.68.1",
     "whitenoise[brotli]==6.12.0",
-    "django-storages[s3]>=1.14.6",
+    "django-storages[s3]==1.14.6",
 ]
 
 [dependency-groups]
