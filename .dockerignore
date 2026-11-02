@@ -7,6 +7,9 @@
 .env
 **/cache
 **/data
+!data/
+!data/parsers/
+!data/parsers/standardize_team_names.py
 *.dump
 *.sqlite3
 scripts/
