@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Review parsed results</h1>
+<p>Verify the teams before importing. Results are created without runner assignments; run the runner-assignment command separately afterward.</p>
+<form method="post" action="{% url 'hytek_confirm' %}">
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="alert alert-danger" role="alert">{{ form.non_field_errors }}</div>{% endif %}
+    <div class="table-responsive">
+        <table class="table table-sm table-striped align-middle">
+            <thead><tr><th>Event</th><th>Place</th><th>Name</th><th>PDF team / selected team</th><th>Time</th><th>Points</th></tr></thead>
+            <tbody>{% for row in rows %}
+                <tr>
+                    <td>{{ row.event }}</td><td>{{ row.place }}</td>
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.raw_team }}<br><label class="visually-hidden" for="id_team_{{ forloop.counter0 }}">Team for {{ row.raw_team }}</label>{{ row.team_field }}{{ row.team_field.errors }}</td>
+                    <td>{{ row.time }}</td><td>{{ row.points }}</td>
+                </tr>
+            {% endfor %}</tbody>
+        </table>
+    </div>
+    <button class="btn btn-primary" type="submit">Confirm import</button>
+</form>
+{% endblock %}

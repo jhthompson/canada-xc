@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Import Hy-Tek results</h1>
+{% if error %}<div class="alert alert-danger">{{ error }}</div>{% endif %}
+<form method="post" enctype="multipart/form-data" class="vstack gap-3">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div><label for="id_pdf" class="form-label">Results PDF</label>{{ form.pdf }}{{ form.pdf.errors }}</div>
+    <fieldset class="border rounded p-3">
+        <legend class="float-none w-auto px-2">Existing race (leave blank to create a new one)</legend>
+        <label class="form-label" for="id_race">Race</label>{{ form.race }}{{ form.race.errors }}
+    </fieldset>
+    <fieldset class="border rounded p-3">
+        <legend class="float-none w-auto px-2">New race details</legend>
+        <label class="form-label" for="id_meet">Existing meet</label>{{ form.meet }}{{ form.meet.errors }}
+        <p class="text-muted">Or enter a new meet:</p>
+        <div><label for="id_meet_name">Meet name</label>{{ form.meet_name }}{{ form.meet_name.errors }}</div>
+        <div><label for="id_meet_slug">Meet slug</label>{{ form.meet_slug }}{{ form.meet_slug.errors }}</div>
+        <div><label for="id_meet_date">Meet date</label>{{ form.meet_date }}{{ form.meet_date.errors }}</div>
+        <div><label for="id_distance">Race distance</label>{{ form.distance }}{{ form.distance.errors }}</div>
+        <div><label for="id_unit">Unit</label>{{ form.unit }}{{ form.unit.errors }}</div>
+        <div><label for="id_sex">Race sex</label>{{ form.sex }}{{ form.sex.errors }}</div>
+    </fieldset>
+    <button class="btn btn-primary align-self-start" type="submit">Parse and review results</button>
+</form>
+{% endblock %}

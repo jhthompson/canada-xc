@@ -151,7 +151,7 @@ class Race(models.Model):
         >>> race.get_display_distance()
         "13.1 mi"
         """
-        return f'{floatformat(self.distance, "-1")} {self.unit}'
+        return f"{floatformat(self.distance, '-1')} {self.unit}"
 
     def top_teams(self):
         return self.score_teams()
@@ -294,7 +294,7 @@ class Runner(models.Model):
             self.rosterspot_set.filter(headshot__isnull=False).order_by("-year").first()
         )
         return roster_spot.headshot if roster_spot else None
-    
+
     def get_roster_spots(self):
         """
         Returns all roster spots for this runner, ordered by year descending.

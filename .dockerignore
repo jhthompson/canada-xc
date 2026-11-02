@@ -9,4 +9,4 @@
 **/data
 *.dump
 *.sqlite3
-update_dev_database.sh
+scripts/

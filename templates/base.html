@@ -34,6 +34,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'results' %}">Results</a>
                     </li>
+                    {% if user.is_staff %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'hytek_import' %}">Import</a>
+                    </li>
+                    {% endif %}
                     {% comment %} <li class="nav-item">
                         <a class="nav-link" href="{% url 'schedule' %}">Schedule</a>
                     </li> {% endcomment %}

@@ -1,8 +1,148 @@
+from datetime import date
+from decimal import Decimal
+
+from django.contrib.admin.views.decorators import staff_member_required
+from django.db import transaction
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 
-from racing.models import Conference, Meet, Race, RosterSpot, Runner, Team
+from racing.forms import HyTekUploadForm, preview_fields
+from racing.hytek import match_teams, parse_finish_time, parse_pdf
+from racing.models import (
+    Conference,
+    Meet,
+    Race,
+    Result,
+    RosterSpot,
+    Runner,
+    Team,
+)
+
+
+@staff_member_required
+def hytek_import(request):
+    if request.method == "POST":
+        form = HyTekUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            try:
+                sex = form.cleaned_data["sex"]
+                parsed = parse_pdf(form.cleaned_data["pdf"])
+                rows = match_teams(
+                    [
+                        row
+                        for row in parsed
+                        if not (
+                            {"men", "male", "women", "female"}
+                            & set(row["event"].casefold().split())
+                        )
+                        or ({"men", "male"} if sex == "M" else {"women", "female"})
+                        & set(row["event"].casefold().split())
+                    ],
+                    sex,
+                )
+                if not rows:
+                    raise ValueError(
+                        "No individual results found for the selected race sex."
+                    )
+            except (ValueError, OSError) as error:
+                form.add_error("pdf", str(error))
+            else:
+                selected_race = form.cleaned_data["race"]
+                if selected_race:
+                    race_data = {"race": selected_race.pk}
+                else:
+                    race_data = {
+                        key: str(form.cleaned_data[key])
+                        if form.cleaned_data.get(key) is not None
+                        else ""
+                        for key in (
+                            "meet",
+                            "meet_name",
+                            "meet_slug",
+                            "meet_date",
+                            "distance",
+                            "unit",
+                            "sex",
+                        )
+                    }
+                request.session["hytek_rows"] = rows
+                request.session["hytek_race"] = race_data
+                initials = {}
+                for index, row in enumerate(rows):
+                    if len(row["teams"]) == 1:
+                        initials[f"team_{index}"] = row["teams"][0]["id"]
+                review_form = preview_fields(rows, initial=initials)
+                entries = [
+                    {**row, "team_field": review_form[f"team_{index}"]}
+                    for index, row in enumerate(rows)
+                ]
+                return render(
+                    request,
+                    "racing/hytek_preview.html",
+                    {"rows": entries, "form": review_form},
+                )
+    else:
+        form = HyTekUploadForm()
+    return render(request, "racing/hytek_upload.html", {"form": form})
+
+
+@staff_member_required
+@transaction.atomic
+def hytek_confirm(request):
+    if request.method != "POST" or "hytek_rows" not in request.session:
+        return redirect("hytek_import")
+    rows = request.session["hytek_rows"]
+    form = preview_fields(rows, data=request.POST)
+    if not form.is_valid():
+        entries = [
+            {**row, "team_field": form[f"team_{index}"]}
+            for index, row in enumerate(rows)
+        ]
+        return render(
+            request, "racing/hytek_preview.html", {"rows": entries, "form": form}
+        )
+    race_data = request.session["hytek_race"]
+    if "race" in race_data:
+        race = get_object_or_404(Race.objects.select_for_update(), pk=race_data["race"])
+    else:
+        meet = (
+            Meet.objects.get(pk=race_data["meet"])
+            if race_data["meet"]
+            else Meet.objects.create(
+                name=race_data["meet_name"],
+                slug=race_data["meet_slug"],
+                date=date.fromisoformat(race_data["meet_date"]),
+            )
+        )
+        race = Race.objects.create(
+            meet=meet,
+            distance=Decimal(race_data["distance"]),
+            unit=race_data["unit"],
+            sex=race_data["sex"],
+        )
+    if race.result_set.exists():
+        return render(
+            request,
+            "racing/hytek_upload.html",
+            {
+                "form": HyTekUploadForm(),
+                "error": "This race already has results; import cancelled.",
+            },
+        )
+    for index, row in enumerate(rows):
+        duration = parse_finish_time(row["time"])
+        team = form.cleaned_data[f"team_{index}"]
+        Result.objects.create(
+            race=race,
+            name=row["name"],
+            time=duration,
+            team=team,
+            points=int(row["points"]) if row["points"] else None,
+        )
+    request.session.pop("hytek_rows", None)
+    request.session.pop("hytek_race", None)
+    return redirect(race.get_absolute_url())
 
 
 def health_check(request):
@@ -29,7 +169,8 @@ def index(request, conference_short_name=None):
             "upcoming_meets": upcoming_meets,
         },
     )
-    
+
+
 def about(request):
     return render(request, "racing/about.html")
 
