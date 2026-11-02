@@ -1,5 +1,5 @@
 # First, build the application in the `/app` directory.
-FROM python:3.14-slim-trixie@sha256:0b566a9f30a60730df33c26ac62dedb55393d8814645cd03543b67bf8987f3a1 AS builder
+FROM python:3.15-slim-trixie@sha256:94d3426f1def7db4a106a232ac121bfd975393e5dfd40a619b955fae45fe7913 AS builder
 COPY --from=ghcr.io/astral-sh/uv@sha256:9f130421e930bfbdc563c00740466603f8723158e90297d07957c2294640262b /uv /uvx /bin/
 
 # Install system dependencies required for building/running psycopg[c]
@@ -34,7 +34,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 
 # Then, use a final image without uv
-FROM python:3.14-slim-trixie@sha256:0b566a9f30a60730df33c26ac62dedb55393d8814645cd03543b67bf8987f3a1
+FROM python:3.15-slim-trixie@sha256:94d3426f1def7db4a106a232ac121bfd975393e5dfd40a619b955fae45fe7913
 # It is important to use the image that matches the builder, as the path to the
 # Python executable must be the same, e.g., using `python:3.11-slim-trixie`
 # will fail.
