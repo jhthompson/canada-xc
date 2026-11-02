@@ -72,6 +72,33 @@ class HyTekUploadFormTests(TestCase):
         result = meet.race_set.get().result_set.get()
         self.assertIsNone(result.runner)
 
+    def test_confirm_resolves_existing_meet_selection(self):
+        meet = Meet.objects.create(
+            name="AUS Championships", slug="aus", date=date(2026, 11, 1)
+        )
+        team = Team.objects.create(
+            short_name="TEST", full_name="Test team", slug="test-team"
+        )
+        user = get_user_model().objects.create_user("admin", is_staff=True)
+        self.client.force_login(user)
+        session = self.client.session
+        session["hytek_rows"] = [
+            {"name": "Runner", "time": "25:11", "points": "", "raw_team": "Test team"}
+        ]
+        # Older pending sessions stored the meet label rather than its primary key.
+        session["hytek_race"] = {
+            "meet": str(meet),
+            "distance": "8",
+            "unit": "km",
+            "sex": "F",
+        }
+        session.save()
+
+        response = self.client.post(reverse("hytek_confirm"), {"team_0": team.pk})
+
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(meet.race_set.get().sex, "F")
+
     def test_preview_fields_validate_posted_team(self):
         team = Team.objects.create(
             short_name="TEST", full_name="Test team", slug="test-team"

@@ -53,9 +53,13 @@ def hytek_import(request):
                     race_data = {"race": selected_race.pk}
                 else:
                     race_data = {
-                        key: str(form.cleaned_data[key])
-                        if form.cleaned_data.get(key) is not None
-                        else ""
+                        key: (
+                            str(form.cleaned_data[key].pk)
+                            if key == "meet" and form.cleaned_data[key]
+                            else str(form.cleaned_data[key])
+                            if form.cleaned_data.get(key) is not None
+                            else ""
+                        )
                         for key in (
                             "meet",
                             "meet_name",
@@ -106,15 +110,35 @@ def hytek_confirm(request):
     if "race" in race_data:
         race = get_object_or_404(Race.objects.select_for_update(), pk=race_data["race"])
     else:
-        meet = (
-            Meet.objects.get(pk=race_data["meet"])
-            if race_data["meet"]
-            else Meet.objects.create(
+        if race_data["meet"]:
+            meet_value = race_data["meet"]
+            if meet_value.isdigit():
+                meet = get_object_or_404(Meet, pk=meet_value)
+            else:  # Recover pending imports that stored the display label.
+                matches = [
+                    candidate
+                    for candidate in Meet.objects.all()
+                    if str(candidate) == meet_value
+                ]
+                if len(matches) != 1:
+                    return render(
+                        request,
+                        "racing/hytek_upload.html",
+                        {
+                            "form": HyTekUploadForm(),
+                            "error": (
+                                "The selected meet could not be identified. "
+                                "Please start the import again."
+                            ),
+                        },
+                    )
+                meet = matches[0]
+        else:
+            meet = Meet.objects.create(
                 name=race_data["meet_name"],
                 slug=race_data["meet_slug"],
                 date=date.fromisoformat(race_data["meet_date"]),
             )
-        )
         race = Race.objects.create(
             meet=meet,
             distance=Decimal(race_data["distance"]),
