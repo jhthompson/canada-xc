@@ -2,124 +2,70 @@
 
 {% load racing_extras static %}
 
-{% block content %}
-<div class="row g-4">
-    <!-- Latest Results Section -->
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">
-                <h2 class="h5 mb-0">Latest Results</h2>
-            </div>
-            <div class="card-body">
-                {% for race in latest_results %}
-                    <div class="d-flex justify-content-between align-items-center gap-1">
-                        <div>
-                            <h3 class="h6 mb-0">
-                                <a href="{{ race.get_absolute_url }}">{{ race.meet.name }} ({{ race.get_sex_display }})</a>
-                            </h3>
-                            <p class="text-muted small mb-2">{{ race.meet.date }}</p>
-                        </div>
-                        <div class="align-self-start text-end d-none d-lg-block">
-                            {% for conference in race.meet.conferences.all %}
-                                {% if conference.logo %}
-                                    <img src="{{ conference.logo.url }}" alt="Conference logo" style="height: 2rem">
-                                {% else %}
-                                    <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ conference }}</span>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-lg-row justify-content-between gap-2 gap-lg-3">
-                        <div class="flex-fill">
-                            <h4 class="h6">Team</h4>
-                            {% for team, score in race.top_teams|slice:"3" %}
-                                <div class="d-flex align-items-center mb-2">
-                                    {% if forloop.counter == 1 %}
-                                        <img src="{% static 'gold.svg' %}" alt="Gold" class="me-2">
-                                    {% endif %}
-                                    {% if forloop.counter == 2 %}
-                                        <img src="{% static 'silver.svg' %}" alt="Silver" class="me-2">
-                                    {% endif %}
-                                    {% if forloop.counter == 3 %}
-                                        <img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">
-                                    {% endif %}
-                                    <div>
-                                        <a href="{% url 'roster' team.slug race.meet.date.year %}">{{ team }}</a>
-                                        <span class="text-muted">({{ score.score }})</span>
-                                    </div>
-                                </div>
-                            {% empty %}
-                                <p class="text-muted fst-italic mb-0">No results</p>
-                            {% endfor %}
-                        </div>
-                        <div class="flex-fill">
-                            <h4 class="h6">Individual</h4>
-                            {% for result in race.top_results|slice:":3" %}
-                                <div class="d-flex align-items-center mb-2">
-                                    {% if forloop.counter == 1 %}
-                                        <img src="{% static 'gold.svg' %}" alt="Gold" class="me-2">
-                                    {% endif %}
-                                    {% if forloop.counter == 2 %}
-                                        <img src="{% static 'silver.svg' %}" alt="Silver" class="me-2">
-                                    {% endif %}
-                                    {% if forloop.counter == 3 %}
-                                        <img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">
-                                    {% endif %}
-                                    <div>
-                                        {% if result.runner %}
-                                            <a href="{{ result.runner.get_absolute_url }}">{{ result.name }}</a>
-                                        {% else %}
-                                            <span>{{ result.name }}</span>
-                                        {% endif %}
-                                        <span class="text-muted">({{ result.time|finish_time }})</span>
-                                    </div>
-                                </div>
-                            {% empty %}
-                                <p class="text-muted fst-italic mb-0">No results</p>
-                            {% endfor %}
-                        </div>
-                    </div>
-                {% if not forloop.last %}<hr>{% endif %}
-                {% empty %}
-                    <p class="text-muted fst-italic mb-0">No results</p>
-                {% endfor %}
-            </div>
-            <div class="card-footer">
-                <a href="{% url 'results' %}">View more results</a>
-            </div>
-        </div>
-    </div>
+{% block extra_head %}
+<style>
+    @media (min-width: 992px) {
+        .race-divider { border-left: var(--bs-border-width) solid var(--bs-border-color); }
+    }
+</style>
+{% endblock %}
 
-    <!-- Upcoming Races Section -->
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">
-                <h2 class="h5 mb-0">Upcoming Meets</h2>
-            </div>
-            <ol class="list-group list-group-flush">
-                {% for meet in upcoming_meets %}
-                <li class="list-group-item d-flex justify-content-between">
-                    <div>
-                        <h3 class="h6 mb-0">
-                            <a class="link-dark" href="#">{{ meet.name }}</a>
-                        </h3>
-                        <p class="text-muted small mb-0">{{ meet.date }}</p>
-                    </div>
-                    <div>
+{% block content %}
+<div class="card col-lg-9 mx-auto">
+    <div class="card-header">
+        <h2 class="h5 mb-0">Latest Results</h2>
+    </div>
+    <div class="card-body">
+        {% for meet in latest_meets %}
+            <section>
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <div class="d-none d-lg-block">
                         {% for conference in meet.conferences.all %}
-                            <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ conference }}</span>
+                            {% if conference.logo %}
+                                <img src="{{ conference.logo.url }}" alt="Conference logo" style="height: 2rem">
+                            {% else %}
+                                <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">{{ conference }}</span>
+                            {% endif %}
                         {% endfor %}
                     </div>
-                </li>
-                {% empty %}
-                    <li class="list-group-item text-muted fst-italic mb-0">No meets</li>
-                {% endfor %}
-            </ol>
-
-            {% comment %} <div class="card-footer">
-                <a href="{% url 'schedule' %}">View full schedule</a>
-            </div> {% endcomment %}
-        </div>
+                    <div>
+                        <h3 class="h6 mb-0"><a href="{{ meet.get_absolute_url }}">{{ meet.name }}</a></h3>
+                        <p class="text-muted small mb-0">{{ meet.date }}</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    {% for race in meet.race_set.all %}
+                        <div class="col-12 col-lg-6{% if not forloop.first %} race-divider{% endif %}">
+                            <h4 class="h6">{{ race.get_sex_display }} · {{ race.get_display_distance }}</h4>
+                            <div class="row g-2">
+                                <div class="col">
+                                    {% for team, score in race.top_teams|slice:":3" %}
+                                        <div class="d-flex align-items-center mb-2">
+                                            {% if forloop.counter == 1 %}<img src="{% static 'gold.svg' %}" alt="Gold" class="me-2">{% endif %}
+                                            {% if forloop.counter == 2 %}<img src="{% static 'silver.svg' %}" alt="Silver" class="me-2">{% endif %}
+                                            {% if forloop.counter == 3 %}<img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">{% endif %}
+                                            <div><a href="{% url 'roster' team.slug race.meet.date.year %}">{{ team }}</a> <span class="text-muted">({{ score.score }})</span></div>
+                                        </div>
+                                    {% empty %}<p class="text-muted fst-italic mb-0">No results</p>{% endfor %}
+                                </div>
+                                <div class="col">
+                                    {% for result in race.top_results|slice:":3" %}
+                                        <div class="d-flex align-items-center mb-2">
+                                            {% if forloop.counter == 1 %}<img src="{% static 'gold.svg' %}" alt="Gold" class="me-2">{% endif %}
+                                            {% if forloop.counter == 2 %}<img src="{% static 'silver.svg' %}" alt="Silver" class="me-2">{% endif %}
+                                            {% if forloop.counter == 3 %}<img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">{% endif %}
+                                            <div>{% if result.runner %}<a href="{{ result.runner.get_absolute_url }}">{{ result.name }}</a>{% else %}{{ result.name }}{% endif %} <span class="text-muted">({{ result.time|finish_time }})</span></div>
+                                        </div>
+                                    {% empty %}<p class="text-muted fst-italic mb-0">No results</p>{% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+            {% if not forloop.last %}<hr>{% endif %}
+        {% empty %}<p class="text-muted fst-italic mb-0">No results</p>{% endfor %}
     </div>
+    <div class="card-footer"><a href="{% url 'results' %}">View more results</a></div>
 </div>
 {% endblock content %}

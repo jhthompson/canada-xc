@@ -174,25 +174,14 @@ def health_check(request):
 
 
 def index(request, conference_short_name=None):
+    latest_meets = Meet.objects.filter(race__isnull=False)
     if conference_short_name:
-        latest_results = Race.objects.filter(
-            meet__conference__short_name=conference_short_name
-        ).order_by("-meet__date")[:2]
-        upcoming_meets = Meet.objects.filter(
-            conference__short_name=conference_short_name, date__gt=timezone.now()
+        latest_meets = latest_meets.filter(
+            conference__short_name=conference_short_name
         )
-    else:
-        latest_results = Race.objects.all().order_by("-meet__date")[:2]
-        upcoming_meets = Meet.objects.filter(date__gt=timezone.now())
+    latest_meets = latest_meets.distinct().order_by("-date")[:4]
 
-    return render(
-        request,
-        "racing/index.html",
-        {
-            "latest_results": latest_results,
-            "upcoming_meets": upcoming_meets,
-        },
-    )
+    return render(request, "racing/index.html", {"latest_meets": latest_meets})
 
 
 def about(request):
