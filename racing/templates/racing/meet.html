@@ -38,7 +38,7 @@
                                     {% if result.runner %}<a href="{{ result.runner.get_absolute_url }}">{{ result.name }}</a>{% else %}{{ result.name }}{% endif %}
                                 </td>
                                 <td>
-                                    {% if result.roster_spot.headshot %}{% thumbnail result.roster_spot.headshot "40x40" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="">{% endthumbnail %}{% endif %}
+                                    {% if result.roster_spot.headshot %}{% thumbnail result.roster_spot.headshot "80x80" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="40" height="40" alt="">{% endthumbnail %}{% endif %}
                                 </td>
                                 <td>{{ result.team }}</td>
                                 <td class="text-nowrap">{{ result.time|finish_time }}</td>

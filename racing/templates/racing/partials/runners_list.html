@@ -13,7 +13,7 @@
         {% with headshot=runner.get_headshot %}
             {% if headshot %}
                 <div class="text-end">
-                    {% thumbnail headshot "50x50" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">{% endthumbnail %}
+                    {% thumbnail headshot "100x100" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="50" height="50">{% endthumbnail %}
                 </div>
             {% endif %}
         {% endwith %}
