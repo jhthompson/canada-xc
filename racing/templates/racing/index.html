@@ -5,7 +5,7 @@
 {% block extra_head %}
 <style>
     @media (min-width: 992px) {
-        .race-divider { border-left: var(--bs-border-width) solid var(--bs-border-color); }
+        .race-divider { border-left: var(--bs-border-width) solid var(--bs-border-color-translucent); }
     }
 </style>
 {% endblock %}
@@ -35,7 +35,7 @@
                 </div>
                 <div class="row g-3">
                     {% for race in meet.race_set.all %}
-                        <div class="col-12 col-lg-6{% if not forloop.first %} race-divider{% endif %}">
+                        <div class="col-12 col-lg-6{% if not forloop.first %} race-divider ps-lg-4{% endif %}">
                             <h4 class="h6">{{ race.get_sex_display }} · {{ race.get_display_distance }}</h4>
                             <div class="row g-2">
                                 <div class="col">
