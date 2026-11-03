@@ -191,7 +191,25 @@ def about(request):
 def meet(request, year: int, slug: str):
     meet = get_object_or_404(Meet, date__year=year, slug=slug)
 
-    return render(request, "racing/meet.html", {"meet": meet})
+    races = list(meet.race_set.all())
+    for race in races:
+        results = list(race.top_results().select_related("runner", "team")[:10])
+        roster_spots = RosterSpot.objects.filter(
+            runner__in=[result.runner for result in results],
+            team__in=[result.team for result in results],
+            year=meet.date.year,
+        )
+        roster_spots_by_runner = {
+            (spot.runner_id, spot.team_id): spot for spot in roster_spots
+        }
+        for result in results:
+            result.roster_spot = roster_spots_by_runner.get(
+                (result.runner_id, result.team_id)
+            )
+        race.meet_results = results
+        race.meet_teams = race.top_teams()[:10]
+
+    return render(request, "racing/meet.html", {"meet": meet, "races": races})
 
 
 def race(request, year: int, slug: str, race_info: tuple[int, str, str]):

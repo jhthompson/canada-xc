@@ -5,7 +5,7 @@
 {% block content %}
 
 <h1>{{ race.meet.date.year }} {{ race.meet.name }}</h1>
-<h2>{{ race.get_display_distance }} - {{ race.get_sex_display }}</h2>
+<h2>{{ race.get_display_distance }} · {{ race.get_sex_display }}</h2>
 
 {% if race.officialresult_set.all %}
     <div class="mb-3">
@@ -16,8 +16,7 @@
 {% endif %}
 
 <div class="row g-4">
-    <div class="col-lg-6">
-        <h3>Individual Results</h3>
+    <div class="col-lg-7">
         <div class="table-responsive">
             <table class="table table-striped table-hover align-middle">
                 <thead>
@@ -64,10 +63,9 @@
         </div>
     </div>
 
-    <div class="col-lg-6">
-        <h3>Team Results</h3>
+    <div class="col-lg-5">
         <div class="table-responsive">
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover align-middle">
                 <thead>
                     <tr>
                         <th scope="col">Place</th>
@@ -89,7 +87,7 @@
                                 {{ forloop.counter|ordinal }}
                             </td>
                             <td>{{ team }}</td>
-                            <td>
+                            <td class="text-nowrap">
                                 {{ score.score }}
                                 <div class="d-inline text-muted">
                                     ({% for result, points in score.scoring_members %}<span data-bs-toggle="tooltip" data-bs-title="{{ result.name }}">{{ points }}</span>{% if not forloop.last %}, {% endif %}{% endfor %}{% for result, points in score.displacers %}, <del data-bs-toggle="tooltip" data-bs-title="{{ result.name }}">{{ points }}</del>{% endfor %})

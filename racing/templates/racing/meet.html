@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load humanize racing_extras static %}
+{% load humanize racing_extras static thumbnail %}
 
 {% block content %}
 
@@ -13,12 +13,73 @@
     {% endfor %}
 </div>
 
-{% for race in meet.race_set.all %}
-
-<h2>
-    <a href="{{ race.get_absolute_url }}">{{ race.get_display_distance }} - {{ race.get_sex_display }}</a>
-</h2>
-
+{% for race in races %}
+<section>
+    <h2><a href="{{ race.get_absolute_url }}">{{ race.get_display_distance }} · {{ race.get_sex_display }}</a></h2>
+    <div class="row g-4">
+        <div class="col-lg-7">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle">
+                    <thead>
+                        <tr><th scope="col">Place</th><th scope="col" colspan="2">Name</th><th scope="col">Team</th><th scope="col">Time</th></tr>
+                    </thead>
+                    <tbody>
+                        {% for result in race.meet_results %}
+                            <tr>
+                                <td class="text-nowrap">
+                                    <div class="d-flex align-items-center">
+                                        {% if forloop.counter == 1 %}<img src="{% static 'gold.svg' %}" alt="Gold" class="me-2">
+                                        {% elif forloop.counter == 2 %}<img src="{% static 'silver.svg' %}" alt="Silver" class="me-2">
+                                        {% elif forloop.counter == 3 %}<img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">{% endif %}
+                                        <span>{{ forloop.counter|ordinal }}</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    {% if result.runner %}<a href="{{ result.runner.get_absolute_url }}">{{ result.name }}</a>{% else %}{{ result.name }}{% endif %}
+                                </td>
+                                <td>
+                                    {% if result.roster_spot.headshot %}{% thumbnail result.roster_spot.headshot "40x40" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="">{% endthumbnail %}{% endif %}
+                                </td>
+                                <td>{{ result.team }}</td>
+                                <td class="text-nowrap">{{ result.time|finish_time }}</td>
+                            </tr>
+                        {% empty %}<tr><td class="text-muted">No individual results available.</td></tr>{% endfor %}
+                        {% if race.meet_results %}<tr><td colspan="5"><a href="{{ race.get_absolute_url }}">See more</a></td></tr>{% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle">
+                    <thead>
+                        <tr><th scope="col">Place</th><th scope="col">Team</th><th scope="col">Score</th></tr>
+                    </thead>
+                    <tbody>
+                        {% for team, score in race.meet_teams %}
+                            <tr>
+                                <td class="text-nowrap">
+                                    <div class="d-flex align-items-center">
+                                        {% if forloop.counter == 1 %}<img src="{% static 'gold.svg' %}" alt="Gold" class="me-2">
+                                        {% elif forloop.counter == 2 %}<img src="{% static 'silver.svg' %}" alt="Silver" class="me-2">
+                                        {% elif forloop.counter == 3 %}<img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">{% endif %}
+                                        <span>{{ forloop.counter|ordinal }}</span>
+                                    </div>
+                                </td>
+                                <td>{{ team }}</td>
+                                <td class="text-nowrap">
+                                    {{ score.score }}
+                                    <span class="text-muted">({% for result, points in score.scoring_members %}<span data-bs-toggle="tooltip" data-bs-title="{{ result.name }}">{{ points }}</span>{% if not forloop.last %}, {% endif %}{% endfor %}{% for result, points in score.displacers %}, <del data-bs-toggle="tooltip" data-bs-title="{{ result.name }}">{{ points }}</del>{% endfor %})</span>
+                                </td>
+                            </tr>
+                        {% empty %}<tr><td class="text-muted">No team results available.</td></tr>{% endfor %}
+                        {% if race.meet_teams %}<tr><td colspan="3"><a href="{{ race.get_absolute_url }}">See more</a></td></tr>{% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
 {% endfor %}
 
 {% endblock content %}
