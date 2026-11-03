@@ -86,7 +86,9 @@
                                 {% endif %}
                                 {{ forloop.counter|ordinal }}
                             </td>
-                            <td>{{ team }}</td>
+                            <td>
+                                <div class="d-flex align-items-center gap-2">{% if team.logo %}{% thumbnail team.logo "56x56" crop="center" format="PNG" as im %}<img src="{{ im.url }}" width="28" height="28" alt="">{% endthumbnail %}{% endif %}{{ team }}</div>
+                            </td>
                             <td class="text-nowrap">
                                 {{ score.score }}
                                 <div class="d-inline text-muted">

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load racing_extras static %}
+{% load racing_extras static thumbnail %}
 
 {% block extra_head %}
 <style>
@@ -44,7 +44,10 @@
                                             {% if forloop.counter == 1 %}<img src="{% static 'gold.svg' %}" alt="Gold" class="me-2">{% endif %}
                                             {% if forloop.counter == 2 %}<img src="{% static 'silver.svg' %}" alt="Silver" class="me-2">{% endif %}
                                             {% if forloop.counter == 3 %}<img src="{% static 'bronze.svg' %}" alt="Bronze" class="me-2">{% endif %}
-                                            <div><a href="{% url 'roster' team.slug race.meet.date.year %}">{{ team }}</a> <span class="text-muted">({{ score.score }})</span></div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                {% if team.logo %}{% thumbnail team.logo "56x56" crop="center" format="PNG" as im %}<img src="{{ im.url }}" width="28" height="28" alt="">{% endthumbnail %}{% endif %}
+                                                <span><a href="{% url 'roster' team.slug race.meet.date.year %}">{{ team }}</a> <span class="text-muted">({{ score.score }})</span></span>
+                                            </div>
                                         </div>
                                     {% empty %}<p class="text-muted fst-italic mb-0">No results</p>{% endfor %}
                                 </div>

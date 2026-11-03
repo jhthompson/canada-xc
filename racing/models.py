@@ -50,6 +50,7 @@ class Team(models.Model):
     short_name = models.CharField(max_length=12)
     full_name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(unique=True)
+    logo = models.ImageField(upload_to="team_logos", blank=True, null=True)
 
     def __str__(self):
         return self.short_name
