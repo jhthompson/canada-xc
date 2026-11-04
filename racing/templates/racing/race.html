@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load humanize racing_extras static thumbnail %}
+{% load humanize racing_extras static %}
 
 {% block content %}
 
@@ -22,7 +22,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Place</th>
-                        <th scope="col" colspan=2>Name</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Team</th>
                         <th scope="col">Time</th>
                     </tr>
@@ -47,11 +47,6 @@
                                     <a href="{{ result.runner.get_absolute_url }}">{{ result.name }}</a>
                                 {% else %}
                                     {{ result.name }}
-                                {% endif %}
-                            </td>
-                            <td>
-                                {% if result.roster_spot.headshot %}
-                                    {% if result.roster_spot %}{% thumbnail result.roster_spot.headshot "80x80" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="40" height="40">{% endthumbnail %}{% endif %}
                                 {% endif %}
                             </td>
                             <td>{{ result.team }}</td>

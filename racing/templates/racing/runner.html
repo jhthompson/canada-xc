@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load humanize racing_extras static thumbnail %}
+{% load humanize racing_extras static %}
 
 {% block extra_head %}
 <link
@@ -11,14 +11,7 @@
 {% endblock extra_head %}
 
 {% block content %}
-<h1>
-    {{ runner.name }}
-    {% with headshot=runner.get_headshot %}
-        {% if headshot %}
-            {% thumbnail headshot "150x150" crop="center top" as im %}<img class="rounded-circle border border-dark ms-1" src="{{ im.url }}" width="75" height="75">{% endthumbnail %}
-        {% endif %}
-    {% endwith %}
-</h1>
+<h1>{{ runner.name }}</h1>
 
 <h2>Teams</h2>
 <div class="list-group mb-2">
